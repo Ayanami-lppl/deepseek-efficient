@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.1.0",
+  "skill_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "date": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "platform": "Windows x64",
+  "harness_version": "0.2.1-rc.2",
+  "surface": "Desktop-bundled official headless runner",
+  "configured_model_label": "DeepSeek-V4.1-Flash",
+  "provider": "deepseek-account",
+  "requested_model": "deepseek-flash",
+  "reasoning_effort": "high",
+  "tool_plugins": [
+    "dsh-ops shell 0.3.0",
+    "dsh-ops file 0.3.0"
+  ],
+  "design": {
+    "task_families": 2,
+    "repetitions_per_task_per_arm": 2,
+    "total_runs": 8,
+    "paired_comparisons": 4,
+    "terminal_execution": false
+  },
+  "runs": [
+    {
+      "run": "T01",
+      "task": "csv",
+      "arm": "baseline",
+      "repetition": 1,
+      "usage": {
+        "inputTokens": 10817,
+        "outputTokens": 7192,
+        "cacheReadTokens": 50176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 68185
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "skill_loads": 0,
+      "agent_turn_ms": 43725,
+      "validation": {
+        "passed": true,
+        "passed_cases": 119,
+        "total_cases": 119
+      },
+      "artifact": "benchmarks/artifacts/T01/totals.py",
+      "artifact_sha256": "497181ea3f3dbd4a3b9c2a41cd29c31e5c051ab942b0a359fe43a7c447bea74c"
+    },
+    {
+      "run": "T02",
+      "task": "csv",
+      "arm": "skill",
+      "repetition": 1,
+      "usage": {
+        "inputTokens": 2974,
+        "outputTokens": 3031,
+        "cacheReadTokens": 47232,
+        "cacheWriteTokens": 0,
+        "totalTokens": 53237
+      },
+      "model_requests": 5,
+      "tool_calls": 6,
+      "skill_loads": 1,
+      "agent_turn_ms": 21795,
+      "validation": {
+        "passed": true,
+        "passed_cases": 119,
+        "total_cases": 119
+      },
+      "artifact": "benchmarks/artifacts/T02/totals.py",
+      "artifact_sha256": "5c76061abf8e4ee2ccf6ca1c9943621932b034d8f25a766efa1b73c5504f1054"
+    },
+    {
+      "run": "T03",
+      "task": "intervals",
+      "arm": "skill",
+      "repetition": 1,
+      "usage": {
+        "inputTokens": 2577,
+        "outputTokens": 749,
+        "cacheReadTokens": 35584,
+        "cacheWriteTokens": 0,
+        "totalTokens": 38910
+      },
+      "model_requests": 4,
+      "tool_calls": 4,
+      "skill_loads": 1,
+      "agent_turn_ms": 8004,
+      "validation": {
+        "passed": true,
+        "passed_cases": 310,
+        "total_cases": 310
+      },
+      "artifact": "benchmarks/artifacts/T03/intervals.py",
+      "artifact_sha256": "3a5915b818341ba3b3e88e438ebdf0e5fc998d64c05deebf8fc92ccafcafc413"
+    },
+    {
+      "run": "T04",
+      "task": "intervals",
+      "arm": "baseline",
+      "repetition": 1,
+      "usage": {
+        "inputTokens": 3572,
+        "outputTokens": 2044,
+        "cacheReadTokens": 76800,
+        "cacheWriteTokens": 0,
+        "totalTokens": 82416
+      },
+      "model_requests": 8,
+      "tool_calls": 7,
+      "skill_loads": 0,
+      "agent_turn_ms": 16543,
+      "validation": {
+        "passed": true,
+        "passed_cases": 310,
+        "total_cases": 310
+      },
+      "artifact": "benchmarks/artifacts/T04/intervals.py",
+      "artifact_sha256": "369fe1ac922d9bae511399336cc663197a34dff837ef81f33b61f53834780d93"
+    },
+    {
+      "run": "T05",
+      "task": "csv",
+      "arm": "skill",
+      "repetition": 2,
+      "usage": {
+        "inputTokens": 4133,
+        "outputTokens": 7316,
+        "cacheReadTokens": 102528,
+        "cacheWriteTokens": 0,
+        "totalTokens": 113977
+      },
+      "model_requests": 8,
+      "tool_calls": 8,
+      "skill_loads": 1,
+      "agent_turn_ms": 47478,
+      "validation": {
+        "passed": true,
+        "passed_cases": 119,
+        "total_cases": 119
+      },
+      "artifact": "benchmarks/artifacts/T05/totals.py",
+      "artifact_sha256": "0dbe839d38c1379df2bcc64ce5e01d65e9c40fbf8d11697c58803e2d15830b65"
+    },
+    {
+      "run": "T06",
+      "task": "csv",
+      "arm": "baseline",
+      "repetition": 2,
+      "usage": {
+        "inputTokens": 4412,
+        "outputTokens": 10211,
+        "cacheReadTokens": 130048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 144671
+      },
+      "model_requests": 10,
+      "tool_calls": 9,
+      "skill_loads": 0,
+      "agent_turn_ms": 62149,
+      "validation": {
+        "passed": true,
+        "passed_cases": 119,
+        "total_cases": 119
+      },
+      "artifact": "benchmarks/artifacts/T06/totals.py",
+      "artifact_sha256": "d058c2846f34609069f7ff8df372f1e1148f4b3b316a51c3ca63c5bb533616ef"
+    },
+    {
+      "run": "T07",
+      "task": "intervals",
+      "arm": "baseline",
+      "repetition": 2,
+      "usage": {
+        "inputTokens": 3311,
+        "outputTokens": 2204,
+        "cacheReadTokens": 56704,
+        "cacheWriteTokens": 0,
+        "totalTokens": 62219
+      },
+      "model_requests": 6,
+      "tool_calls": 7,
+      "skill_loads": 0,
+      "agent_turn_ms": 16718,
+      "validation": {
+        "passed": true,
+        "passed_cases": 310,
+        "total_cases": 310
+      },
+      "artifact": "benchmarks/artifacts/T07/intervals.py",
+      "artifact_sha256": "8fc147579b16d06b2cb68eb8c94c629286ba1aa9cb1a3796a2609db9a6b0e91d"
+    },
+    {
+      "run": "T08",
+      "task": "intervals",
+      "arm": "skill",
+      "repetition": 2,
+      "usage": {
+        "inputTokens": 3036,
+        "outputTokens": 1220,
+        "cacheReadTokens": 55680,
+        "cacheWriteTokens": 0,
+        "totalTokens": 59936
+      },
+      "model_requests": 6,
+      "tool_calls": 6,
+      "skill_loads": 2,
+      "agent_turn_ms": 12933,
+      "validation": {
+        "passed": true,
+        "passed_cases": 310,
+        "total_cases": 310
+      },
+      "artifact": "benchmarks/artifacts/T08/intervals.py",
+      "artifact_sha256": "514c77d44855269a7969bd2574b5c0fa0e9a1950f9456855ae8b0b74dc25e266"
+    }
+  ],
+  "totals": {
+    "baseline": {
+      "trials": 4,
+      "passed": 4,
+      "total_tokens": 357491,
+      "output_tokens": 21651,
+      "input_tokens_including_cache": 335840,
+      "tool_calls": 30,
+      "steps": 29,
+      "agent_turn_ms": 139135
+    },
+    "skill": {
+      "trials": 4,
+      "passed": 4,
+      "total_tokens": 266060,
+      "output_tokens": 12316,
+      "input_tokens_including_cache": 253744,
+      "tool_calls": 24,
+      "steps": 23,
+      "agent_turn_ms": 90210
+    }
+  },
+  "pairs": [
+    {
+      "task": "csv",
+      "repetition": 1,
+      "baseline_tokens": 68185,
+      "skill_tokens": 53237,
+      "token_reduction_percent": 21.92271027352057,
+      "baseline_passed": true,
+      "skill_passed": true
+    },
+    {
+      "task": "csv",
+      "repetition": 2,
+      "baseline_tokens": 144671,
+      "skill_tokens": 113977,
+      "token_reduction_percent": 21.21641517650393,
+      "baseline_passed": true,
+      "skill_passed": true
+    },
+    {
+      "task": "intervals",
+      "repetition": 1,
+      "baseline_tokens": 82416,
+      "skill_tokens": 38910,
+      "token_reduction_percent": 52.78829353523588,
+      "baseline_passed": true,
+      "skill_passed": true
+    },
+    {
+      "task": "intervals",
+      "repetition": 2,
+      "baseline_tokens": 62219,
+      "skill_tokens": 59936,
+      "token_reduction_percent": 3.6692971600315016,
+      "baseline_passed": true,
+      "skill_passed": true
+    }
+  ],
+  "limitations": [
+    "Only two small task families and two repetitions each; no general or statistical-significance claim.",
+    "Headless engine test; GUI end-to-end interaction was not verified.",
+    "All committed model request usage is included, including cache inputs, skill loading, tool feedback, reasoning and answer output.",
+    "Automatic title requests expose no usage and are excluded; unreported failed attempts cannot be counted.",
+    "Token counts are not billed cost.",
+    "No terminal, web, large-repository or long-session evaluation.",
+    "This tests the skill plus explicit invocation; no ablation against pasting identical plain-text instructions."
+  ],
+  "privacy": "Only synthetic task definitions and aggregate numerical results are published. No raw session archives, local paths, credentials or personal memory are distributed."
+}

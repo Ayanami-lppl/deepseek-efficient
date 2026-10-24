@@ -1,0 +1,12 @@
+{
+  "csv": {
+    "filename": "totals.py",
+    "contract": "修复 totals.py 中的 aggregate(text) 函数。输入是带表头 customer,amount 的 CSV 文本；允许开头UTF-8 BOM、带引号的客户名（包括逗号），忽略空白行。相同客户累加，金额使用 decimal.Decimal 保证精确，返回按首次出现顺序的 dict[str, Decimal]。无数据时返回空字典。表头不匹配、行字段数不为2、客户名去首尾空白后为空、金额不是有限十进制数时抛 ValueError。客户名和金额都去首尾空白。不要改变函数签名，不新增第三方依赖。请直接修复并保存文件，然后简要说明修改。",
+    "initial_code": "from decimal import Decimal\n\ndef aggregate(text):\n    result = {}\n    for line in text.splitlines()[1:]:\n        if not line.strip():\n            continue\n        name, amount = line.split(\",\")\n        result[name] = result.get(name, 0.0) + float(amount)\n    return result\n"
+  },
+  "intervals": {
+    "filename": "intervals.py",
+    "contract": "修复 intervals.py 中的 merge_intervals(intervals) 函数。输入为整数半开区间(start,end)的列表，可乱序、重叠、重复或为负数。返回按起点升序的互不重叠区间元组列表。只合并真正重叠的区间，相邻但不重叠的区间不能合并；零长度区间忽略；任一start>end时抛ValueError；空输入返回空列表。不得修改传入列表或其中元素；不得新增第三方依赖；保留函数签名。请直接修复并保存文件，然后简要说明修改。",
+    "initial_code": "def merge_intervals(intervals):\n    intervals.sort()\n    merged = []\n    for start, end in intervals:\n        if merged and start <= merged[-1][1]:\n            merged[-1] = (merged[-1][0], end)\n        else:\n            merged.append((start, end))\n    return merged\n"
+  }
+}
