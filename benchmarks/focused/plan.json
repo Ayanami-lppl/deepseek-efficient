@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "design": "4 new task definitions x 2 arms x 2 repetitions, adjacent matched blocks; randomized first order and reversed second order per task",
+  "seed": 2026102402,
+  "randomizer": "Python standard-library random.Random",
+  "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "max_trials": 16,
+  "max_phase_seconds": 240,
+  "effort": "high",
+  "provider": "deepseek-account",
+  "model": "deepseek-flash",
+  "adoption": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "candidate_pair_wins_min": 6,
+    "pairs": 8,
+    "every_task_has_pair_win": true,
+    "per_task_total_ratio_max": 1.05
+  },
+  "trials": [
+    {
+      "id": "F01",
+      "task": "join",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F01，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F02",
+      "task": "join",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F02，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F03",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F03，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F04",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F04，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F05",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F05，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F06",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F06，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F07",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F07，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F08",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F08，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F09",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F09，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F10",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F10，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F11",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F11，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F12",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F12，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F13",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F13，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F14",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F14，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F15",
+      "task": "join",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F15，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "F16",
+      "task": "join",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 F16，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    }
+  ],
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "089c0044724cfa7f72560162cde88ad2bf14e91921d1ff2470a137e03eeaf207",
+  "limitations": [
+    "Exploratory fixed-budget experiment, no power calculation or general significance claim.",
+    "No no-skill arm; comparison is only against v0.1.1 at the same High effort.",
+    "Single-turn synthetic tasks in the headless engine; no GUI/production/long-session claim.",
+    "Candidate was frozen before these task files were created."
+  ]
+}

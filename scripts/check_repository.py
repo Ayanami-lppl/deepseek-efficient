@@ -171,71 +171,91 @@ def main():
     check_history()
     check_negative_controls()
     check_extended()
-    check_reasoning()
+    check_prompt_experiment("reasoning", ["graph", "ledger"])
+    check_prompt_experiment("focused", ["join", "limiter", "patch", "paths"])
     check_public_files()
     check = subprocess.run([sys.executable, "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-v"], cwd=ROOT)
     require(check.returncode == 0, "Release package tests failed")
     print("All offline repository checks passed; no model/API calls were made.")
 
 
-def check_reasoning():
-    base = ROOT / "benchmarks" / "reasoning"
+def check_prompt_experiment(directory, tasks):
+    base = ROOT / "benchmarks" / directory
     result = json.loads((base / "results.json").read_text(encoding="utf-8"))
     plan = json.loads((base / "plan.json").read_text(encoding="utf-8"))
     snapshots = {arm: (base / name).resolve() for arm, name in result["prompt_snapshots"].items()}
-    require(digest(snapshots["original"]) == result["old_sha256"] == plan["old_sha256"], "Reasoning original prompt hash mismatch")
-    require(digest(snapshots["candidate"]) == result["candidate_sha256"] == plan["candidate_sha256"], "Reasoning candidate prompt hash mismatch")
+    require(digest(snapshots["original"]) == result["old_sha256"] == plan["old_sha256"], "Prompt experiment original prompt hash mismatch")
+    require(digest(snapshots["candidate"]) == result["candidate_sha256"] == plan["candidate_sha256"], "Prompt experiment candidate prompt hash mismatch")
     require(digest(ROOT / "SKILL.md") == result["old_sha256"], "Experimental prompt was promoted despite unmet criterion")
     spec = importlib.util.spec_from_file_location("reasoning_fixture", base / "fixture.py")
     fixture = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(fixture)
     rows = result["rows"]
-    require(len(rows) == len(plan["trials"]) == 8 and len({r["run"] for r in rows}) == 8, "Reasoning run count mismatch")
+    expected_runs = len(tasks) * 4
+    require(len(rows) == len(plan["trials"]) == expected_runs and len({r["run"] for r in rows}) == expected_runs, "Prompt experiment run count mismatch")
     keys = ["inputTokens", "outputTokens", "cacheReadTokens", "cacheWriteTokens", "totalTokens"]
     for row, trial in zip(rows, plan["trials"]):
-        require(row["run"] == trial["id"] and all(row[k] == trial[k] for k in ["task", "arm", "repetition", "effort"]), "Reasoning plan/run mismatch")
+        require(row["run"] == trial["id"] and all(row[k] == trial[k] for k in ["task", "arm", "repetition", "effort"]), "Prompt experiment plan/run mismatch")
         require(all(type(row["usage"][k]) is int and row["usage"][k] >= 0 for k in keys), "Invalid reasoning usage")
-        require(row["usage"]["totalTokens"] == sum(row["usage"][k] for k in keys[:-1]), "Reasoning token accounting mismatch")
+        require(row["usage"]["totalTokens"] == sum(row["usage"][k] for k in keys[:-1]), "Prompt experiment token accounting mismatch")
         definition, files = fixture.files_for(row["task"])
         for relative, wanted in row["expected_frozen_hashes"].items():
             actual = digest(snapshots[row["arm"]]) if relative == ".agents/skills/deepseek-efficient/SKILL.md" else hashlib.sha256(files[relative].encode("utf-8")).hexdigest()
-            require(actual == wanted, "Reasoning frozen fixture mismatch")
+            require(actual == wanted, "Prompt experiment frozen fixture mismatch")
         artifact = (base / row["artifact"]).resolve()
-        require(artifact.is_relative_to(base) and digest(artifact) == row["artifact_sha256"], "Reasoning artifact hash mismatch")
+        require(artifact.is_relative_to(base) and digest(artifact) == row["artifact_sha256"], "Prompt experiment artifact hash mismatch")
         check = fixture.evaluate(row["task"], artifact)
         count = definition["test_methods"]
-        require(check.returncode == 0 and f"Ran {count} tests" in check.stderr and count == row["test_methods"], "Reasoning artifact failed: " + row["run"] + "\n" + check.stderr)
+        require(check.returncode == 0 and f"Ran {count} tests" in check.stderr and count == row["test_methods"], "Prompt experiment artifact failed: " + row["run"] + "\n" + check.stderr)
         quality = (row["transport_exit"] == 0 and not row["timed_out"] and row["has_final"] and row["unit_tests_passed"] and not row["protected_files_changed"] and row["terminal_verification_passed"] and row["route_correct"])
-        require(row["all_checks_passed"] == quality, "Reasoning observation summary mismatch")
-    for task in ["graph", "ledger"]:
+        require(row["all_checks_passed"] == quality, "Prompt experiment observation summary mismatch")
+    for task in tasks:
         order = [[t["arm"] for t in plan["trials"] if t["task"] == task and t["repetition"] == n] for n in [1, 2]]
-        require(set(order[0]) == {"original", "candidate"} and order[0] == list(reversed(order[1])), "Reasoning order balance mismatch")
+        require(set(order[0]) == {"original", "candidate"} and order[0] == list(reversed(order[1])), "Prompt experiment order balance mismatch")
     for arm in ["original", "candidate"]:
         group = [r for r in rows if r["arm"] == arm]
         total = result["totals"][arm]
-        require({(r["task"], r["repetition"]) for r in group} == {(t, n) for t in ["graph", "ledger"] for n in [1, 2]}, "Reasoning design mismatch")
-        require(total["runs"] == 4 and total["all_checks_passed"] == sum(r["all_checks_passed"] for r in group), "Reasoning aggregate quality mismatch")
-        require(all(total["usage"][k] == sum(r["usage"][k] for r in group) for k in keys), "Reasoning aggregate usage mismatch")
-        require(all(total[k] == sum(r[k] for r in group) for k in ["model_requests", "tool_calls", "wall_ms"]), "Reasoning aggregate calls/time mismatch")
-    require(len(result["pairs"]) == 4 and len({(p["task"], p["repetition"]) for p in result["pairs"]}) == 4, "Reasoning pair count mismatch")
+        require({(r["task"], r["repetition"]) for r in group} == {(t, n) for t in tasks for n in [1, 2]}, "Prompt experiment design mismatch")
+        require(total["runs"] == len(tasks) * 2 and total["all_checks_passed"] == sum(r["all_checks_passed"] for r in group), "Prompt experiment aggregate quality mismatch")
+        require(all(total["usage"][k] == sum(r["usage"][k] for r in group) for k in keys), "Prompt experiment aggregate usage mismatch")
+        require(all(total[k] == sum(r[k] for r in group) for k in ["model_requests", "tool_calls", "wall_ms"]), "Prompt experiment aggregate calls/time mismatch")
+    require(len(result["pairs"]) == len(tasks) * 2 and len({(p["task"], p["repetition"]) for p in result["pairs"]}) == len(tasks) * 2, "Prompt experiment pair count mismatch")
     for pair in result["pairs"]:
         a = next(r for r in rows if r["task"] == pair["task"] and r["repetition"] == pair["repetition"] and r["arm"] == "original")
         b = next(r for r in rows if r["task"] == pair["task"] and r["repetition"] == pair["repetition"] and r["arm"] == "candidate")
-        require(pair["original_tokens"] == a["usage"]["totalTokens"] and pair["candidate_tokens"] == b["usage"]["totalTokens"], "Reasoning pair usage mismatch")
-        require(pair["candidate_wins"] == (pair["candidate_tokens"] < pair["original_tokens"]), "Reasoning pair winner mismatch")
-        require(math.isclose(pair["reduction_percent"], 100 * (1 - pair["candidate_tokens"] / pair["original_tokens"]), abs_tol=1e-9), "Reasoning pair percentage mismatch")
+        require(pair["original_tokens"] == a["usage"]["totalTokens"] and pair["candidate_tokens"] == b["usage"]["totalTokens"], "Prompt experiment pair usage mismatch")
+        require(pair["candidate_wins"] == (pair["candidate_tokens"] < pair["original_tokens"]), "Prompt experiment pair winner mismatch")
+        require(math.isclose(pair["reduction_percent"], 100 * (1 - pair["candidate_tokens"] / pair["original_tokens"]), abs_tol=1e-9), "Prompt experiment pair percentage mismatch")
     criterion = plan["adoption"]
-    require(result["adoption_criterion"] == criterion, "Reasoning adoption criterion changed")
+    require(result["adoption_criterion"] == criterion, "Prompt experiment adoption criterion changed")
     adopt = (all(r["all_checks_passed"] for r in rows) and result["totals"]["candidate"]["usage"]["totalTokens"] / result["totals"]["original"]["usage"]["totalTokens"] <= criterion["candidate_total_ratio_max"] and sum(p["candidate_wins"] for p in result["pairs"]) >= criterion["candidate_pair_wins_min"])
-    require(result["candidate_adopted"] == adopt, "Reasoning adoption decision mismatch")
+    if "task_totals" in result:
+        require(set(result["task_totals"]) == set(tasks), "Per-task summary keys mismatch")
+        for task in tasks:
+            groups = {arm: [r for r in rows if r["task"] == task and r["arm"] == arm] for arm in ["original", "candidate"]}
+            a = sum(r["usage"]["totalTokens"] for r in groups["original"])
+            b = sum(r["usage"]["totalTokens"] for r in groups["candidate"])
+            total = result["task_totals"][task]
+            require(total["original_runs"] == total["candidate_runs"] == 2, "Per-task run count mismatch")
+            require(total["original_tokens"] == a and total["candidate_tokens"] == b and math.isclose(total["candidate_ratio"], b / a, abs_tol=1e-12), "Per-task tokens mismatch")
+            wins = sum(p["candidate_wins"] for p in result["pairs"] if p["task"] == task)
+            require(total["pair_wins"] == wins, "Per-task wins mismatch")
+            if criterion.get("every_task_has_pair_win"):
+                adopt = adopt and wins >= 1
+            if "per_task_total_ratio_max" in criterion:
+                adopt = adopt and b / a <= criterion["per_task_total_ratio_max"]
+        for row in rows:
+            require(all(type(row[k]) is int and row[k] >= 0 for k in ["native_read_calls", "native_read_steps", "discovery_calls", "write_or_edit_calls"]), "Invalid observed tool metric")
+            require(row["native_read_steps"] <= row["native_read_calls"] <= row["tool_calls"], "Inconsistent native read counts")
+    require(result["candidate_adopted"] == adopt, "Prompt experiment adoption decision mismatch")
     with tempfile.TemporaryDirectory(prefix="deepseek-reasoning-control-") as temporary:
-        for task in ["graph", "ledger"]:
+        for task in tasks:
             definition, files = fixture.files_for(task)
             original = Path(temporary) / (task + ".py")
             original.write_text(files[definition["editable"][0]], encoding="utf-8", newline="\n")
             check = fixture.evaluate(task, original)
-            require(check.returncode == 1 and "FAILED" in check.stderr, "Reasoning original bug control did not fail as expected")
-    print("Reasoning experiment, 88 unittest method executions and negative controls: OK")
+            require(check.returncode == 1 and "FAILED" in check.stderr, "Prompt experiment original bug control did not fail as expected")
+    print(directory + " experiment:", sum(r["test_methods"] for r in rows), "unittest method executions and negative controls: OK")
 
 
 if __name__ == "__main__":
