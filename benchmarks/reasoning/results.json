@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-24T10:03:51.238Z",
+  "complete": true,
+  "completed": 8,
+  "planned": 8,
+  "design": "2 new task families x 2 arms x 2 independent repetitions; adjacent matched blocks, randomized starting order per family and reversed in second repetition",
+  "adoption_criterion": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "candidate_pair_wins_min": 3,
+    "pairs": 4
+  },
+  "candidate_adopted": false,
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450",
+  "totals": {
+    "original": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 18838,
+        "outputTokens": 7019,
+        "cacheReadTokens": 273152,
+        "cacheWriteTokens": 0,
+        "totalTokens": 299009
+      },
+      "model_requests": 27,
+      "tool_calls": 34,
+      "wall_ms": 74185
+    },
+    "candidate": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 18334,
+        "outputTokens": 7476,
+        "cacheReadTokens": 238976,
+        "cacheWriteTokens": 0,
+        "totalTokens": 264786
+      },
+      "model_requests": 24,
+      "tool_calls": 33,
+      "wall_ms": 72952
+    }
+  },
+  "pairs": [
+    {
+      "task": "graph",
+      "repetition": 1,
+      "original_tokens": 63945,
+      "candidate_tokens": 63656,
+      "candidate_wins": true,
+      "reduction_percent": 0.4519508953006457
+    },
+    {
+      "task": "graph",
+      "repetition": 2,
+      "original_tokens": 63565,
+      "candidate_tokens": 66224,
+      "candidate_wins": false,
+      "reduction_percent": -4.183119641312039
+    },
+    {
+      "task": "ledger",
+      "repetition": 1,
+      "original_tokens": 65562,
+      "candidate_tokens": 68783,
+      "candidate_wins": false,
+      "reduction_percent": -4.912906866782585
+    },
+    {
+      "task": "ledger",
+      "repetition": 2,
+      "original_tokens": 105937,
+      "candidate_tokens": 66123,
+      "candidate_wins": true,
+      "reduction_percent": 37.582714254698544
+    }
+  ],
+  "rows": [
+    {
+      "run": "R01",
+      "task": "graph",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3937,
+        "outputTokens": 1256,
+        "cacheReadTokens": 58752,
+        "cacheWriteTokens": 0,
+        "totalTokens": 63945
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 16713,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R01/planner.py",
+      "artifact_sha256": "09882887d450243ff9b1ea2ee1aa9e1b485a400cdc3eaf4fd3bcc05de2d9f5e4",
+      "archive_sha256": "2cd9abf21562dfec22ccfae37e9c87a5af495d60f2acfcfe9ea99605c7491874",
+      "expected_frozen_hashes": {
+        "test_planner.py": "6f4ed69b08793334bef714e026a3ac96ee63b097c2aa7781c399f8978d1e7de2",
+        "CONTRACT.md": "0ef143afd1108dbb169dce7aa8d08089804648ef91a91d0bb1f34e39c857cd71",
+        "TASK.md": "de326cc8ec3e15517b36aec35a9236969aa6b4c1535fef3d6846de25c0813ad9",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "R02",
+      "task": "graph",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4432,
+        "outputTokens": 1112,
+        "cacheReadTokens": 58112,
+        "cacheWriteTokens": 0,
+        "totalTokens": 63656
+      },
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14452,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R02/planner.py",
+      "artifact_sha256": "dc6e0412984f916800ac19e8a9fc34dc23107c8bff5f6408434a2d733a5b95e0",
+      "archive_sha256": "698917f1c21a8ac1ba6da1fef1825cb1c5e578678ae9ec1558a7fc7571b17396",
+      "expected_frozen_hashes": {
+        "test_planner.py": "6f4ed69b08793334bef714e026a3ac96ee63b097c2aa7781c399f8978d1e7de2",
+        "CONTRACT.md": "0ef143afd1108dbb169dce7aa8d08089804648ef91a91d0bb1f34e39c857cd71",
+        "TASK.md": "de326cc8ec3e15517b36aec35a9236969aa6b4c1535fef3d6846de25c0813ad9",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450"
+      }
+    },
+    {
+      "run": "R03",
+      "task": "ledger",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4796,
+        "outputTokens": 1758,
+        "cacheReadTokens": 59008,
+        "cacheWriteTokens": 0,
+        "totalTokens": 65562
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 12,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 16854,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R03/ledger.py",
+      "artifact_sha256": "7cbe3e99f24f6ac32d9f6eb39ee8da983497c02f9e168b695d21b52680d545f3",
+      "archive_sha256": "57364eb096f610ec78c7dc74c7788f44aa471f5603eabd1f87807da270935e50",
+      "expected_frozen_hashes": {
+        "test_ledger.py": "dd64d9eacd4e98b05ff2d84a2726606d1d7a0b978f9d402ceefa55ab5594787d",
+        "CONTRACT.md": "af4affbb7ff762cd46682b257b5d39cd7d60b2f21fc38e4b4d771384e8555b8c",
+        "TASK.md": "7cb42d1427c24d20ca71cf8b837cc3cce4ff4a37ed441619e75968e85c75b2b2",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "R04",
+      "task": "ledger",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4805,
+        "outputTokens": 2666,
+        "cacheReadTokens": 61312,
+        "cacheWriteTokens": 0,
+        "totalTokens": 68783
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 12,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 24308,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R04/ledger.py",
+      "artifact_sha256": "03108b7f126992af01da2ffb5c1e29507e1c6db02333ecb3894c9dbaeb2a6e94",
+      "archive_sha256": "f9903652bcefb99e180e62885b402f2974d4af8d5973d66864e4b7978af7793e",
+      "expected_frozen_hashes": {
+        "test_ledger.py": "dd64d9eacd4e98b05ff2d84a2726606d1d7a0b978f9d402ceefa55ab5594787d",
+        "CONTRACT.md": "af4affbb7ff762cd46682b257b5d39cd7d60b2f21fc38e4b4d771384e8555b8c",
+        "TASK.md": "7cb42d1427c24d20ca71cf8b837cc3cce4ff4a37ed441619e75968e85c75b2b2",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450"
+      }
+    },
+    {
+      "run": "R05",
+      "task": "ledger",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4732,
+        "outputTokens": 1743,
+        "cacheReadTokens": 59648,
+        "cacheWriteTokens": 0,
+        "totalTokens": 66123
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 12,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 16624,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R05/ledger.py",
+      "artifact_sha256": "7bbcea3aaf7b495ca6a38927216e87d36de474b90e1964f812554a52e5a2549a",
+      "archive_sha256": "801db585ab826930f0c9c4751dd02d010796c6fd1b60b34442ffe03bd158ce44",
+      "expected_frozen_hashes": {
+        "test_ledger.py": "dd64d9eacd4e98b05ff2d84a2726606d1d7a0b978f9d402ceefa55ab5594787d",
+        "CONTRACT.md": "af4affbb7ff762cd46682b257b5d39cd7d60b2f21fc38e4b4d771384e8555b8c",
+        "TASK.md": "7cb42d1427c24d20ca71cf8b837cc3cce4ff4a37ed441619e75968e85c75b2b2",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450"
+      }
+    },
+    {
+      "run": "R06",
+      "task": "ledger",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5850,
+        "outputTokens": 2807,
+        "cacheReadTokens": 97280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 105937
+      },
+      "model_requests": 9,
+      "tool_calls": 10,
+      "tool_errors": 1,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 12,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 25431,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R06/ledger.py",
+      "artifact_sha256": "e61a566d1304f4657b29334b638b42d2b5f0f7a720e47e86f68ad599d6d1f419",
+      "archive_sha256": "e545d2ed5de7c012389798595dc849de4b70f01804f887bfd21b7fc6b5af7709",
+      "expected_frozen_hashes": {
+        "test_ledger.py": "dd64d9eacd4e98b05ff2d84a2726606d1d7a0b978f9d402ceefa55ab5594787d",
+        "CONTRACT.md": "af4affbb7ff762cd46682b257b5d39cd7d60b2f21fc38e4b4d771384e8555b8c",
+        "TASK.md": "7cb42d1427c24d20ca71cf8b837cc3cce4ff4a37ed441619e75968e85c75b2b2",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "R07",
+      "task": "graph",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4365,
+        "outputTokens": 1955,
+        "cacheReadTokens": 59904,
+        "cacheWriteTokens": 0,
+        "totalTokens": 66224
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 17568,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R07/planner.py",
+      "artifact_sha256": "ad438586cff6b2a41ba125cd16f7df345b0776680497873af726d3d9bec912b0",
+      "archive_sha256": "a36ae7a270fac9b6a12858414877ac958004f0cd66e3aad8ffa4d8a1b1942168",
+      "expected_frozen_hashes": {
+        "test_planner.py": "6f4ed69b08793334bef714e026a3ac96ee63b097c2aa7781c399f8978d1e7de2",
+        "CONTRACT.md": "0ef143afd1108dbb169dce7aa8d08089804648ef91a91d0bb1f34e39c857cd71",
+        "TASK.md": "de326cc8ec3e15517b36aec35a9236969aa6b4c1535fef3d6846de25c0813ad9",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450"
+      }
+    },
+    {
+      "run": "R08",
+      "task": "graph",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4255,
+        "outputTokens": 1198,
+        "cacheReadTokens": 58112,
+        "cacheWriteTokens": 0,
+        "totalTokens": 63565
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "skill_loads": 1,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 15187,
+      "all_checks_passed": true,
+      "artifact": "artifacts/R08/planner.py",
+      "artifact_sha256": "d09a367426e2012ded251049b84f50311e9c2138bcec0f4a25b3d4ede506e9fb",
+      "archive_sha256": "f9244d1b3277202e13ca29ebc44d41312a71d7105a6ca6360f21157f2b07bf1c",
+      "expected_frozen_hashes": {
+        "test_planner.py": "6f4ed69b08793334bef714e026a3ac96ee63b097c2aa7781c399f8978d1e7de2",
+        "CONTRACT.md": "0ef143afd1108dbb169dce7aa8d08089804648ef91a91d0bb1f34e39c857cd71",
+        "TASK.md": "de326cc8ec3e15517b36aec35a9236969aa6b4c1535fef3d6846de25c0813ad9",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    }
+  ],
+  "limitations": [
+    "Small, exploratory pilot with only two new task families, not powered for general claims.",
+    "No no-skill control; effect is relative to published v0.1.1.",
+    "Single-turn headless engine, not GUI or long-context validation.",
+    "Candidate was frozen before these fixtures were written; fixtures were not used to tune wording."
+  ],
+  "accounting": "All committed assistant request usages from exact private session archives, including cache reads and tool errors. Missing in-flight usage and title generation without usage cannot be included.",
+  "host": {
+    "name": "DeepSeek Harness",
+    "version": "0.2.1-rc.2",
+    "entry": "desktop-bundled headless CLI",
+    "provider": "deepseek-account",
+    "model": "deepseek-flash",
+    "effort": "high",
+    "tools": "dsh-ops shell/file 0.3.0"
+  },
+  "prompt_snapshots": {
+    "original": "../prompts/v0.1.0.txt",
+    "candidate": "../prompts/reasoning-guided.txt"
+  },
+  "published_runtime_changed": false,
+  "provenance": "Sanitized local machine observations from exact private session archives. Public hashes identify the retained private archives; raw traces are not published and cannot be independently reconstructed from these aggregates."
+}

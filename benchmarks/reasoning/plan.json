@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "design": "2 new task families x 2 arms x 2 independent repetitions; adjacent matched blocks, randomized starting order per family and reversed in second repetition",
+  "seed": 20261024,
+  "randomizer": "Python standard-library random.Random",
+  "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "max_trials": 8,
+  "max_phase_seconds": 240,
+  "effort": "high",
+  "provider": "deepseek-account",
+  "model": "deepseek-flash",
+  "adoption": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "candidate_pair_wins_min": 3,
+    "pairs": 4
+  },
+  "trials": [
+    {
+      "id": "R01",
+      "task": "graph",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "planner.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R01，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R02",
+      "task": "graph",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "planner.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R02，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R03",
+      "task": "ledger",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "ledger.py"
+      ],
+      "expected_test_methods": 12,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R03，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R04",
+      "task": "ledger",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "ledger.py"
+      ],
+      "expected_test_methods": 12,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R04，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R05",
+      "task": "ledger",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "ledger.py"
+      ],
+      "expected_test_methods": 12,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R05，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R06",
+      "task": "ledger",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "ledger.py"
+      ],
+      "expected_test_methods": 12,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R06，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R07",
+      "task": "graph",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "planner.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R07，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    },
+    {
+      "id": "R08",
+      "task": "graph",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "planner.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请使用本项目 deepseek-efficient 技能完成独立合成任务 R08，读取 TASK.md 和 CONTRACT.md，执行要求的验证。只操作当前目录。"
+    }
+  ],
+  "limitations": [
+    "Small, exploratory pilot with only two new task families, not powered for general claims.",
+    "No no-skill control; effect is relative to published v0.1.1.",
+    "Single-turn headless engine, not GUI or long-context validation.",
+    "Candidate was frozen before these fixtures were written; fixtures were not used to tune wording."
+  ],
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "db6977e5d817b7ab30a5fdf51608465aca103fa0342f2a1d3ab3cca207ca0450"
+}
