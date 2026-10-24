@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "design": "2 read paths x 2 independent fixture repetitions, balanced ABBA order",
+  "scope": "Reproduce interoperability only; not a prompt-efficiency estimate.",
+  "rows": [
+    {
+      "run": "G01",
+      "arm": "inspect",
+      "usage": {
+        "inputTokens": 2764,
+        "outputTokens": 513,
+        "cacheReadTokens": 43776,
+        "cacheWriteTokens": 0,
+        "totalTokens": 47053
+      },
+      "model_requests": 5,
+      "tool_calls": 4,
+      "first_read": "ops_inspect_local_file",
+      "first_native_write_rejected_as_unread": true,
+      "native_read_fallback": true,
+      "native_write_calls": 2,
+      "marker_and_protected_files_passed": true,
+      "forbidden_shell_or_edit_calls": 0,
+      "hypothesis_observed": true,
+      "archive_sha256": "81e9642dba183131b19a8b3fba8d1ac2110e514b5c6fc9d32b59600c9e7bc311"
+    },
+    {
+      "run": "G02",
+      "arm": "read",
+      "usage": {
+        "inputTokens": 2291,
+        "outputTokens": 202,
+        "cacheReadTokens": 24960,
+        "cacheWriteTokens": 0,
+        "totalTokens": 27453
+      },
+      "model_requests": 3,
+      "tool_calls": 2,
+      "first_read": "read",
+      "first_native_write_rejected_as_unread": false,
+      "native_read_fallback": false,
+      "native_write_calls": 1,
+      "marker_and_protected_files_passed": true,
+      "forbidden_shell_or_edit_calls": 0,
+      "hypothesis_observed": true,
+      "archive_sha256": "87609706111c6ee053f2da1653dacaec857d2ec06ecc6185c2407e2616443121"
+    },
+    {
+      "run": "G03",
+      "arm": "read",
+      "usage": {
+        "inputTokens": 2160,
+        "outputTokens": 504,
+        "cacheReadTokens": 34688,
+        "cacheWriteTokens": 0,
+        "totalTokens": 37352
+      },
+      "model_requests": 4,
+      "tool_calls": 3,
+      "first_read": "read",
+      "first_native_write_rejected_as_unread": false,
+      "native_read_fallback": false,
+      "native_write_calls": 1,
+      "marker_and_protected_files_passed": true,
+      "forbidden_shell_or_edit_calls": 0,
+      "hypothesis_observed": true,
+      "archive_sha256": "b0f45af718de66000f2845f4b9aa6d78aaaed2d30413156d024f30647b5caa7f"
+    },
+    {
+      "run": "G04",
+      "arm": "inspect",
+      "usage": {
+        "inputTokens": 2511,
+        "outputTokens": 778,
+        "cacheReadTokens": 54144,
+        "cacheWriteTokens": 0,
+        "totalTokens": 57433
+      },
+      "model_requests": 6,
+      "tool_calls": 5,
+      "first_read": "ops_inspect_local_file",
+      "first_native_write_rejected_as_unread": true,
+      "native_read_fallback": true,
+      "native_write_calls": 2,
+      "marker_and_protected_files_passed": true,
+      "forbidden_shell_or_edit_calls": 0,
+      "hypothesis_observed": true,
+      "archive_sha256": "2a955e58a9122c5ee5663fe52058934dc65ce1bbfef19f0737e04e8f4f46da2e"
+    }
+  ],
+  "all_hypotheses_observed": true,
+  "host": {
+    "harness": "0.2.1-rc.3",
+    "tools": "dsh-ops shell/file 0.3.0",
+    "entry": "desktop-bundled headless CLI",
+    "version_observation": "Installed package manifests checked after the batch; not a pinned binary snapshot."
+  },
+  "provenance": "Sanitized local observations; raw traces retained privately."
+}

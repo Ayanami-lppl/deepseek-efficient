@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "design": "4 frozen tasks x skill absent/present x High/Low x 2 independent repetitions; adjacent four-arm blocks, randomized first order and reversed second order per task",
+  "seed": 2026102501,
+  "randomizer": "Python random.Random",
+  "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "max_trials": 32,
+  "max_phase_seconds": 240,
+  "provider": "deepseek-account",
+  "model": "deepseek-flash",
+  "skill_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "trials": [
+    {
+      "id": "A01",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A01。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A02",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A02。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A03",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A03。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A04",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A04。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A05",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A05。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A06",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A06。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A07",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A07。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A08",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A08。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A09",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A09。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A10",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A10。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A11",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A11。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A12",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A12。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A13",
+      "task": "join",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A13。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A14",
+      "task": "join",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A14。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A15",
+      "task": "join",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A15。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A16",
+      "task": "join",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A16。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A17",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A17。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A18",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A18。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A19",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A19。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A20",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "paths.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A20。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A21",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A21。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A22",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A22。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A23",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A23。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A24",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "patcher.py"
+      ],
+      "expected_test_methods": 10,
+      "prompt": "请完成本项目独立合成任务 A24。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A25",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A25。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A26",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A26。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A27",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A27。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A28",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "limiter.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A28。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A29",
+      "task": "join",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A29。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A30",
+      "task": "join",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A30。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A31",
+      "task": "join",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A31。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    },
+    {
+      "id": "A32",
+      "task": "join",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "editable": [
+        "joiner.py"
+      ],
+      "expected_test_methods": 11,
+      "prompt": "请完成本项目独立合成任务 A32。若系统提供 deepseek-efficient 技能，先使用；否则直接执行。读取 TASK.md 和 CONTRACT.md，完成全部验证并尽量省 token。只操作当前目录。"
+    }
+  ],
+  "analysis": {
+    "comparisons": [
+      [
+        "none_high",
+        "skill_high"
+      ],
+      [
+        "none_low",
+        "skill_low"
+      ],
+      [
+        "none_high",
+        "none_low"
+      ],
+      [
+        "skill_high",
+        "skill_low"
+      ]
+    ],
+    "recommendation_criterion": {
+      "all_runs_pass_quality_and_adherence": true,
+      "candidate_total_ratio_max": 0.9,
+      "pair_wins_min": 6,
+      "pairs": 8,
+      "every_task_has_win": true,
+      "per_task_total_ratio_max": 1.05
+    },
+    "no_significance_claim": true
+  },
+  "limitations": [
+    "Frozen tasks reused; this is an intervention/effort study, not a new-task generalization test.",
+    "Skill effect includes installation, discovery and loading with an identical conditional invocation prompt, not just the 94-character body.",
+    "Cache warmth is not controllable; report uncached, cached and output components separately.",
+    "A fixed-budget descriptive study; no power calculation or universal quality claim.",
+    "No global setting change; single-turn desktop-bundled headless engine, not GUI or production validation."
+  ]
+}

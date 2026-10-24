@@ -1,0 +1,3983 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-24T18:47:17.203Z",
+  "complete": true,
+  "completed": 32,
+  "planned": 32,
+  "design": "4 frozen tasks x skill absent/present x High/Low x 2 independent repetitions; adjacent four-arm blocks, randomized first order and reversed second order per task",
+  "skill_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "totals": {
+    "none_high": {
+      "runs": 8,
+      "quality_passed": 8,
+      "adherence_passed": 8,
+      "all_checks_passed": 8,
+      "usage": {
+        "inputTokens": 40080,
+        "outputTokens": 28613,
+        "cacheReadTokens": 651136,
+        "cacheWriteTokens": 0,
+        "totalTokens": 719829
+      },
+      "model_requests": 55,
+      "tool_calls": 71,
+      "wall_ms": 225500
+    },
+    "skill_high": {
+      "runs": 8,
+      "quality_passed": 8,
+      "adherence_passed": 8,
+      "all_checks_passed": 8,
+      "usage": {
+        "inputTokens": 32679,
+        "outputTokens": 13061,
+        "cacheReadTokens": 414848,
+        "cacheWriteTokens": 0,
+        "totalTokens": 460588
+      },
+      "model_requests": 42,
+      "tool_calls": 58,
+      "wall_ms": 149912
+    },
+    "none_low": {
+      "runs": 8,
+      "quality_passed": 8,
+      "adherence_passed": 8,
+      "all_checks_passed": 8,
+      "usage": {
+        "inputTokens": 34360,
+        "outputTokens": 19778,
+        "cacheReadTokens": 451328,
+        "cacheWriteTokens": 0,
+        "totalTokens": 505466
+      },
+      "model_requests": 44,
+      "tool_calls": 57,
+      "wall_ms": 214847
+    },
+    "skill_low": {
+      "runs": 8,
+      "quality_passed": 8,
+      "adherence_passed": 8,
+      "all_checks_passed": 8,
+      "usage": {
+        "inputTokens": 32151,
+        "outputTokens": 10197,
+        "cacheReadTokens": 406400,
+        "cacheWriteTokens": 0,
+        "totalTokens": 448748
+      },
+      "model_requests": 42,
+      "tool_calls": 56,
+      "wall_ms": 117990
+    }
+  },
+  "comparisons": [
+    {
+      "baseline": "none_high",
+      "candidate": "skill_high",
+      "ratio": 0.6398575217169633,
+      "wins": 8,
+      "all_quality_and_adherence": true,
+      "meets_predefined_recommendation": true,
+      "task_totals": {
+        "join": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 170440,
+          "candidate_tokens": 114650,
+          "ratio": 0.6726707345693499,
+          "wins": 2
+        },
+        "limiter": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 129983,
+          "candidate_tokens": 109785,
+          "ratio": 0.8446104490587231,
+          "wins": 2
+        },
+        "patch": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 286982,
+          "candidate_tokens": 122933,
+          "ratio": 0.4283648451819278,
+          "wins": 2
+        },
+        "paths": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 132424,
+          "candidate_tokens": 113220,
+          "ratio": 0.8549809702168791,
+          "wins": 2
+        }
+      },
+      "pairs": [
+        {
+          "task": "join",
+          "repetition": 1,
+          "baseline_tokens": 95412,
+          "candidate_tokens": 56405,
+          "candidate_wins": true
+        },
+        {
+          "task": "join",
+          "repetition": 2,
+          "baseline_tokens": 75028,
+          "candidate_tokens": 58245,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 1,
+          "baseline_tokens": 59313,
+          "candidate_tokens": 54751,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 2,
+          "baseline_tokens": 70670,
+          "candidate_tokens": 55034,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 1,
+          "baseline_tokens": 134300,
+          "candidate_tokens": 69125,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 2,
+          "baseline_tokens": 152682,
+          "candidate_tokens": 53808,
+          "candidate_wins": true
+        },
+        {
+          "task": "paths",
+          "repetition": 1,
+          "baseline_tokens": 52283,
+          "candidate_tokens": 51112,
+          "candidate_wins": true
+        },
+        {
+          "task": "paths",
+          "repetition": 2,
+          "baseline_tokens": 80141,
+          "candidate_tokens": 62108,
+          "candidate_wins": true
+        }
+      ]
+    },
+    {
+      "baseline": "none_low",
+      "candidate": "skill_low",
+      "ratio": 0.8877906723696549,
+      "wins": 5,
+      "all_quality_and_adherence": true,
+      "meets_predefined_recommendation": false,
+      "task_totals": {
+        "join": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 129640,
+          "candidate_tokens": 112115,
+          "ratio": 0.8648179574205492,
+          "wins": 1
+        },
+        "limiter": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 116024,
+          "candidate_tokens": 109218,
+          "ratio": 0.9413397228159691,
+          "wins": 1
+        },
+        "patch": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 126642,
+          "candidate_tokens": 115389,
+          "ratio": 0.9111432226275643,
+          "wins": 2
+        },
+        "paths": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 133160,
+          "candidate_tokens": 112026,
+          "ratio": 0.8412886752778612,
+          "wins": 1
+        }
+      },
+      "pairs": [
+        {
+          "task": "join",
+          "repetition": 1,
+          "baseline_tokens": 74166,
+          "candidate_tokens": 55154,
+          "candidate_wins": true
+        },
+        {
+          "task": "join",
+          "repetition": 2,
+          "baseline_tokens": 55474,
+          "candidate_tokens": 56961,
+          "candidate_wins": false
+        },
+        {
+          "task": "limiter",
+          "repetition": 1,
+          "baseline_tokens": 54065,
+          "candidate_tokens": 54597,
+          "candidate_wins": false
+        },
+        {
+          "task": "limiter",
+          "repetition": 2,
+          "baseline_tokens": 61959,
+          "candidate_tokens": 54621,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 1,
+          "baseline_tokens": 54459,
+          "candidate_tokens": 53523,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 2,
+          "baseline_tokens": 72183,
+          "candidate_tokens": 61866,
+          "candidate_wins": true
+        },
+        {
+          "task": "paths",
+          "repetition": 1,
+          "baseline_tokens": 82954,
+          "candidate_tokens": 51621,
+          "candidate_wins": true
+        },
+        {
+          "task": "paths",
+          "repetition": 2,
+          "baseline_tokens": 50206,
+          "candidate_tokens": 60405,
+          "candidate_wins": false
+        }
+      ]
+    },
+    {
+      "baseline": "none_high",
+      "candidate": "none_low",
+      "ratio": 0.7022028842961314,
+      "wins": 7,
+      "all_quality_and_adherence": true,
+      "meets_predefined_recommendation": true,
+      "task_totals": {
+        "join": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 170440,
+          "candidate_tokens": 129640,
+          "ratio": 0.7606195728702183,
+          "wins": 2
+        },
+        "limiter": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 129983,
+          "candidate_tokens": 116024,
+          "ratio": 0.8926090334889947,
+          "wins": 2
+        },
+        "patch": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 286982,
+          "candidate_tokens": 126642,
+          "ratio": 0.4412890007038769,
+          "wins": 2
+        },
+        "paths": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 132424,
+          "candidate_tokens": 133160,
+          "ratio": 1.0055579049114964,
+          "wins": 1
+        }
+      },
+      "pairs": [
+        {
+          "task": "join",
+          "repetition": 1,
+          "baseline_tokens": 95412,
+          "candidate_tokens": 74166,
+          "candidate_wins": true
+        },
+        {
+          "task": "join",
+          "repetition": 2,
+          "baseline_tokens": 75028,
+          "candidate_tokens": 55474,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 1,
+          "baseline_tokens": 59313,
+          "candidate_tokens": 54065,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 2,
+          "baseline_tokens": 70670,
+          "candidate_tokens": 61959,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 1,
+          "baseline_tokens": 134300,
+          "candidate_tokens": 54459,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 2,
+          "baseline_tokens": 152682,
+          "candidate_tokens": 72183,
+          "candidate_wins": true
+        },
+        {
+          "task": "paths",
+          "repetition": 1,
+          "baseline_tokens": 52283,
+          "candidate_tokens": 82954,
+          "candidate_wins": false
+        },
+        {
+          "task": "paths",
+          "repetition": 2,
+          "baseline_tokens": 80141,
+          "candidate_tokens": 50206,
+          "candidate_wins": true
+        }
+      ]
+    },
+    {
+      "baseline": "skill_high",
+      "candidate": "skill_low",
+      "ratio": 0.9742937288856852,
+      "wins": 6,
+      "all_quality_and_adherence": true,
+      "meets_predefined_recommendation": false,
+      "task_totals": {
+        "join": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 114650,
+          "candidate_tokens": 112115,
+          "ratio": 0.9778892280854775,
+          "wins": 2
+        },
+        "limiter": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 109785,
+          "candidate_tokens": 109218,
+          "ratio": 0.9948353600218609,
+          "wins": 2
+        },
+        "patch": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 122933,
+          "candidate_tokens": 115389,
+          "ratio": 0.9386332392441411,
+          "wins": 1
+        },
+        "paths": {
+          "baseline_runs": 2,
+          "candidate_runs": 2,
+          "baseline_tokens": 113220,
+          "candidate_tokens": 112026,
+          "ratio": 0.9894541600423954,
+          "wins": 1
+        }
+      },
+      "pairs": [
+        {
+          "task": "join",
+          "repetition": 1,
+          "baseline_tokens": 56405,
+          "candidate_tokens": 55154,
+          "candidate_wins": true
+        },
+        {
+          "task": "join",
+          "repetition": 2,
+          "baseline_tokens": 58245,
+          "candidate_tokens": 56961,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 1,
+          "baseline_tokens": 54751,
+          "candidate_tokens": 54597,
+          "candidate_wins": true
+        },
+        {
+          "task": "limiter",
+          "repetition": 2,
+          "baseline_tokens": 55034,
+          "candidate_tokens": 54621,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 1,
+          "baseline_tokens": 69125,
+          "candidate_tokens": 53523,
+          "candidate_wins": true
+        },
+        {
+          "task": "patch",
+          "repetition": 2,
+          "baseline_tokens": 53808,
+          "candidate_tokens": 61866,
+          "candidate_wins": false
+        },
+        {
+          "task": "paths",
+          "repetition": 1,
+          "baseline_tokens": 51112,
+          "candidate_tokens": 51621,
+          "candidate_wins": false
+        },
+        {
+          "task": "paths",
+          "repetition": 2,
+          "baseline_tokens": 62108,
+          "candidate_tokens": 60405,
+          "candidate_wins": true
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "run": "A01",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3536,
+        "outputTokens": 853,
+        "cacheReadTokens": 47232,
+        "cacheWriteTokens": 0,
+        "totalTokens": 51621
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 12807,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 170,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9144
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 519,
+            "outputTokens": 137,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9744
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 691,
+            "outputTokens": 239,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10658
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 224,
+            "outputTokens": 88,
+            "cacheReadTokens": 10496,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10808
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 296,
+            "outputTokens": 219,
+            "cacheReadTokens": 10752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11267
+          }
+        }
+      ],
+      "artifact": "artifacts/A01/paths.py",
+      "artifact_sha256": "9a48d794f8d8af33ea2edd809962c5d76013affba1d8884736034cc0442a5086",
+      "archive_sha256": "f1e84d855bc34062393782ea6e5da0d1d4ca32e5a65f87c12235aab016f13e3b",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A02",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 3708,
+        "outputTokens": 959,
+        "cacheReadTokens": 47616,
+        "cacheWriteTokens": 0,
+        "totalTokens": 52283
+      },
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 5,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 12313,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 208,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9146
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 573,
+            "outputTokens": 100,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9761
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 839,
+            "outputTokens": 299,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10866
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 176,
+            "outputTokens": 62,
+            "cacheReadTokens": 10752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10990
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 350,
+            "outputTokens": 290,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11520
+          }
+        }
+      ],
+      "artifact": "artifacts/A02/paths.py",
+      "artifact_sha256": "af6a6f8942dd0a94886abbf1ccae50724fcc1ec459b6ef1e6b8e120c5b12725c",
+      "archive_sha256": "c38d64c31312a82341a358e252b8f73ef4dc00161e614c4d5a3f6d885003eab2",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A03",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3620,
+        "outputTokens": 772,
+        "cacheReadTokens": 46720,
+        "cacheWriteTokens": 0,
+        "totalTokens": 51112
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 11123,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 113,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9087
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 590,
+            "outputTokens": 81,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9631
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 706,
+            "outputTokens": 213,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10519
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 213,
+            "outputTokens": 108,
+            "cacheReadTokens": 10368,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10689
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 305,
+            "outputTokens": 257,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11186
+          }
+        }
+      ],
+      "artifact": "artifacts/A03/paths.py",
+      "artifact_sha256": "49c87f3f1a70e3ab06155ec7031866d7fd464e8bd256b44478aef3ddf483eb95",
+      "archive_sha256": "9ffa23ffd93e1598cc16f1c6049998f29c8bd4fc9f8b876281e0d52305212244",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A04",
+      "task": "paths",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 5774,
+        "outputTokens": 1276,
+        "cacheReadTokens": 75904,
+        "cacheWriteTokens": 0,
+        "totalTokens": 82954
+      },
+      "model_requests": 7,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 1,
+      "native_read_calls": 1,
+      "inspect_read_calls": 4,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 15657,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 246,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9184
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 770,
+            "outputTokens": 115,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9973
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 2204,
+            "outputTokens": 266,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12326
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 228,
+            "outputTokens": 57,
+            "cacheReadTokens": 12160,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12445
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 242,
+            "outputTokens": 168,
+            "cacheReadTokens": 12288,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12698
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 216,
+            "outputTokens": 144,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12904
+          }
+        },
+        {
+          "step": 7,
+          "usage": {
+            "inputTokens": 344,
+            "outputTokens": 280,
+            "cacheReadTokens": 12800,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13424
+          }
+        }
+      ],
+      "artifact": "artifacts/A04/paths.py",
+      "artifact_sha256": "fec99392b3ceb26e7e1f2eeb1518fdcdb0a72e3f441cd95ac08315da669b73b8",
+      "archive_sha256": "16b35c3f61f95685fa9d5a2c723cbc5c9dcda03fd2228b5d5f77c9db06c0ad96",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A05",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3983,
+        "outputTokens": 2550,
+        "cacheReadTokens": 62592,
+        "cacheWriteTokens": 0,
+        "totalTokens": 69125
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 1,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 45222,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 604,
+            "outputTokens": 84,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9648
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 921,
+            "outputTokens": 1500,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12021
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 179,
+            "outputTokens": 153,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12236
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 338,
+            "outputTokens": 420,
+            "cacheReadTokens": 12160,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12918
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 135,
+            "outputTokens": 281,
+            "cacheReadTokens": 12800,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13216
+          }
+        }
+      ],
+      "artifact": "artifacts/A05/patcher.py",
+      "artifact_sha256": "41aa799e671e2704cfd8bb7d3c77c722d3e51d1fcfdd416afd4699e973b06fdb",
+      "archive_sha256": "f44441188c6685c0ee6887ba4492010f1290d9fa321eb52775ff3508d4ffb15f",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A06",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3869,
+        "outputTokens": 1398,
+        "cacheReadTokens": 48256,
+        "cacheWriteTokens": 0,
+        "totalTokens": 53523
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 15018,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 99,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9073
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 591,
+            "outputTokens": 71,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9622
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 895,
+            "outputTokens": 785,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11280
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 206,
+            "outputTokens": 159,
+            "cacheReadTokens": 11136,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11501
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 371,
+            "outputTokens": 284,
+            "cacheReadTokens": 11392,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12047
+          }
+        }
+      ],
+      "artifact": "artifacts/A06/patcher.py",
+      "artifact_sha256": "39aaa061802a93b3f9213de632ad8a34ef3c1e565a7a629eb1b99d6ad3435137",
+      "archive_sha256": "15d633f4fed6376daeb890e9229261d57089833ef6614566721015cca0cfe1de",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A07",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 6068,
+        "outputTokens": 8296,
+        "cacheReadTokens": 119936,
+        "cacheWriteTokens": 0,
+        "totalTokens": 134300
+      },
+      "model_requests": 8,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 1,
+      "native_write_unread_errors": 1,
+      "native_read_calls": 1,
+      "inspect_read_calls": 4,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 54533,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 100,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9038
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 514,
+            "outputTokens": 90,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9564
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 2654,
+            "outputTokens": 6095,
+            "cacheReadTokens": 9472,
+            "cacheWriteTokens": 0,
+            "totalTokens": 18221
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 235,
+            "outputTokens": 58,
+            "cacheReadTokens": 18048,
+            "cacheWriteTokens": 0,
+            "totalTokens": 18341
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 258,
+            "outputTokens": 513,
+            "cacheReadTokens": 18176,
+            "cacheWriteTokens": 0,
+            "totalTokens": 18947
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 193,
+            "outputTokens": 96,
+            "cacheReadTokens": 18816,
+            "cacheWriteTokens": 0,
+            "totalTokens": 19105
+          }
+        },
+        {
+          "step": 7,
+          "usage": {
+            "inputTokens": 295,
+            "outputTokens": 988,
+            "cacheReadTokens": 19072,
+            "cacheWriteTokens": 0,
+            "totalTokens": 20355
+          }
+        },
+        {
+          "step": 8,
+          "usage": {
+            "inputTokens": 149,
+            "outputTokens": 356,
+            "cacheReadTokens": 20224,
+            "cacheWriteTokens": 0,
+            "totalTokens": 20729
+          }
+        }
+      ],
+      "artifact": "artifacts/A07/patcher.py",
+      "artifact_sha256": "d449321a0d8824c6989ee7509206ad420ab0670700ad6015b1a136e22fb9f6b9",
+      "archive_sha256": "8c30fcae3a10f668c9dc9c20f4fc196ce2f43c5c6c5623d6fd1f158d87ac8ff0",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A08",
+      "task": "patch",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 3823,
+        "outputTokens": 1612,
+        "cacheReadTokens": 49024,
+        "cacheWriteTokens": 0,
+        "totalTokens": 54459
+      },
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 3,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 16478,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 91,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9029
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 466,
+            "outputTokens": 191,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9617
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1021,
+            "outputTokens": 1085,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11706
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 248,
+            "outputTokens": 64,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11832
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 318,
+            "outputTokens": 181,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12275
+          }
+        }
+      ],
+      "artifact": "artifacts/A08/patcher.py",
+      "artifact_sha256": "7aac4d8fb8e622c53a6ff08d85ba5cfb9548e9d896719885d7eaf28a46a000c3",
+      "archive_sha256": "e3401f62af5aae0fa6c5e0d3f48c17faedf5e3b0f40833b56de6e9a5a447b14e",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A09",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4460,
+        "outputTokens": 1241,
+        "cacheReadTokens": 48896,
+        "cacheWriteTokens": 0,
+        "totalTokens": 54597
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14200,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 99,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9073
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 620,
+            "outputTokens": 79,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9659
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1374,
+            "outputTokens": 599,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11573
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 244,
+            "outputTokens": 236,
+            "cacheReadTokens": 11392,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11872
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 416,
+            "outputTokens": 228,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12420
+          }
+        }
+      ],
+      "artifact": "artifacts/A09/limiter.py",
+      "artifact_sha256": "67a4736a34e42bf22ba9dbcfcb79a7f86c9908b67d12a398888046feb01ceee2",
+      "archive_sha256": "23f381565c2f5d9a521b4576a1fce6fc9aa30a209de13d670a5d58e0f1368f85",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A10",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4320,
+        "outputTokens": 1361,
+        "cacheReadTokens": 48384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 54065
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14943,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 59,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 8997
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 203,
+            "outputTokens": 153,
+            "cacheReadTokens": 8832,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9188
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1755,
+            "outputTokens": 846,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11689
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 232,
+            "outputTokens": 64,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11816
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 360,
+            "outputTokens": 239,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12375
+          }
+        }
+      ],
+      "artifact": "artifacts/A10/limiter.py",
+      "artifact_sha256": "ad272b00fed90f36268f3ac24e00e8743d965536d8bb721b51b514e7359ba874",
+      "archive_sha256": "02ba40d75a99273249085539c2b1dbeb923b019f30ae3f349ec308ce8eb6e654",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A11",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4470,
+        "outputTokens": 1257,
+        "cacheReadTokens": 49024,
+        "cacheWriteTokens": 0,
+        "totalTokens": 54751
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13795,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 633,
+            "outputTokens": 72,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9665
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1380,
+            "outputTokens": 737,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11717
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 260,
+            "outputTokens": 70,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11850
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 391,
+            "outputTokens": 266,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12433
+          }
+        }
+      ],
+      "artifact": "artifacts/A11/limiter.py",
+      "artifact_sha256": "660b6bd60cf40422125b6cb711f8f5bd72319d3788c648ebdc633da1f17e410a",
+      "archive_sha256": "73525040fb1ea454ec70b038272614374dd1c6779d1798133e3d618e5b450d8a",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A12",
+      "task": "limiter",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4410,
+        "outputTokens": 2551,
+        "cacheReadTokens": 52352,
+        "cacheWriteTokens": 0,
+        "totalTokens": 59313
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 20188,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 171,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9109
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 707,
+            "outputTokens": 72,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9867
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1326,
+            "outputTokens": 1979,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13161
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 168,
+            "outputTokens": 79,
+            "cacheReadTokens": 13056,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13303
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 439,
+            "outputTokens": 250,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13873
+          }
+        }
+      ],
+      "artifact": "artifacts/A12/limiter.py",
+      "artifact_sha256": "bfa85e4d0ad6c2c20548f5a6f5c3e33f182711b8bfdf37f55b2b3d52d358f825",
+      "archive_sha256": "76e13a928bce7b8857ce68822524bb398e3f5c8692034a6374f4d6eccfc413b2",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A13",
+      "task": "join",
+      "repetition": 1,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4133,
+        "outputTokens": 1613,
+        "cacheReadTokens": 49408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 55154
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 16838,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 115,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9089
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 527,
+            "outputTokens": 83,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9698
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1154,
+            "outputTokens": 1088,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11842
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 257,
+            "outputTokens": 88,
+            "cacheReadTokens": 11648,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11993
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 389,
+            "outputTokens": 239,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12532
+          }
+        }
+      ],
+      "artifact": "artifacts/A13/joiner.py",
+      "artifact_sha256": "3b16b2cb4844335a9c50150b84592fb8c5af195f20dc92296467302eafa78cf9",
+      "archive_sha256": "eed5f84fb5d8b1c35b9e40071a773954fc5e7443609b5b33c38057b72d8d6996",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A14",
+      "task": "join",
+      "repetition": 1,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4270,
+        "outputTokens": 2087,
+        "cacheReadTokens": 50048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 56405
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 18531,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 652,
+            "outputTokens": 72,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9684
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1140,
+            "outputTokens": 1490,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12230
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 261,
+            "outputTokens": 106,
+            "cacheReadTokens": 12032,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12399
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 411,
+            "outputTokens": 307,
+            "cacheReadTokens": 12288,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13006
+          }
+        }
+      ],
+      "artifact": "artifacts/A14/joiner.py",
+      "artifact_sha256": "fafe28a59f9d0d43a5fbab72edf2c9f04b11cabdd1e97a08565065c5d42b2144",
+      "archive_sha256": "f5347097acc3f4a25b8e36f43896ca03c76b83f09c174b9c51ebdaa63553cac4",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A15",
+      "task": "join",
+      "repetition": 1,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 6144,
+        "outputTokens": 3508,
+        "cacheReadTokens": 85760,
+        "cacheWriteTokens": 0,
+        "totalTokens": 95412
+      },
+      "model_requests": 7,
+      "tool_calls": 8,
+      "tool_errors": 1,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 1,
+      "native_read_calls": 1,
+      "inspect_read_calls": 4,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 31007,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 124,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9062
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 586,
+            "outputTokens": 90,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9636
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 2835,
+            "outputTokens": 2216,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14651
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 250,
+            "outputTokens": 64,
+            "cacheReadTokens": 14464,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14778
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 175,
+            "outputTokens": 536,
+            "cacheReadTokens": 14720,
+            "cacheWriteTokens": 0,
+            "totalTokens": 15431
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 134,
+            "outputTokens": 88,
+            "cacheReadTokens": 15360,
+            "cacheWriteTokens": 0,
+            "totalTokens": 15582
+          }
+        },
+        {
+          "step": 7,
+          "usage": {
+            "inputTokens": 394,
+            "outputTokens": 390,
+            "cacheReadTokens": 15488,
+            "cacheWriteTokens": 0,
+            "totalTokens": 16272
+          }
+        }
+      ],
+      "artifact": "artifacts/A15/joiner.py",
+      "artifact_sha256": "49ffd85036be85676088cc508f021ffd03fd4632c0b2048b1ecf10370a90e713",
+      "archive_sha256": "d7a2a80f660b88c3627b1f7d111c8c5281d3fc3199a1ebbb3e720a70393027f8",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A16",
+      "task": "join",
+      "repetition": 1,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4117,
+        "outputTokens": 3617,
+        "cacheReadTokens": 66432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 74166
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 1,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 69270,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 180,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9118
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 610,
+            "outputTokens": 72,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9770
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1098,
+            "outputTokens": 2364,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13190
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 197,
+            "outputTokens": 65,
+            "cacheReadTokens": 13056,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13318
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 306,
+            "outputTokens": 581,
+            "cacheReadTokens": 13312,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14199
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 136,
+            "outputTokens": 355,
+            "cacheReadTokens": 14080,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14571
+          }
+        }
+      ],
+      "artifact": "artifacts/A16/joiner.py",
+      "artifact_sha256": "5d057505b445aa17c996d30f02bec072b5db2f530bef8399c73c596012e2d0ae",
+      "archive_sha256": "c6f34fa71cf26d5ca257815ceea8246c36d7d04b7d77f467c53e44bf06806989",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A17",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 3347,
+        "outputTokens": 779,
+        "cacheReadTokens": 46080,
+        "cacheWriteTokens": 0,
+        "totalTokens": 50206
+      },
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 11352,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 80,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9018
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 358,
+            "outputTokens": 70,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9388
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 719,
+            "outputTokens": 256,
+            "cacheReadTokens": 9344,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10319
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 141,
+            "outputTokens": 106,
+            "cacheReadTokens": 10240,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10487
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 359,
+            "outputTokens": 267,
+            "cacheReadTokens": 10368,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10994
+          }
+        }
+      ],
+      "artifact": "artifacts/A17/paths.py",
+      "artifact_sha256": "fb242b9b96a28a70ea7f235480ec377c5b41b3ec1fc15e8bb4fdd14b87bc3edc",
+      "archive_sha256": "1421e69a65a524007c14e33c72dea72e983a16489b357b3e286a12d08fda60c9",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A18",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3901,
+        "outputTokens": 863,
+        "cacheReadTokens": 57344,
+        "cacheWriteTokens": 0,
+        "totalTokens": 62108
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 12639,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 113,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9087
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 590,
+            "outputTokens": 70,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9620
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 264,
+            "outputTokens": 70,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9934
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 753,
+            "outputTokens": 301,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10910
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 220,
+            "outputTokens": 64,
+            "cacheReadTokens": 10752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11036
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 268,
+            "outputTokens": 245,
+            "cacheReadTokens": 11008,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11521
+          }
+        }
+      ],
+      "artifact": "artifacts/A18/paths.py",
+      "artifact_sha256": "edcf7e194bea1f50f5e3bd3a7499020c8ec865e6469e0fe88d69834b07f40e09",
+      "archive_sha256": "57c4ff3fac6d526c8e986b0845317f4b0443b9499e7fba317d8e13830279bb0f",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A19",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 5210,
+        "outputTokens": 1075,
+        "cacheReadTokens": 73856,
+        "cacheWriteTokens": 0,
+        "totalTokens": 80141
+      },
+      "model_requests": 7,
+      "tool_calls": 8,
+      "tool_errors": 1,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 1,
+      "native_read_calls": 1,
+      "inspect_read_calls": 4,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14474,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 95,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9033
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 495,
+            "outputTokens": 94,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9549
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 2164,
+            "outputTokens": 257,
+            "cacheReadTokens": 9472,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11893
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 179,
+            "outputTokens": 58,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12013
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 194,
+            "outputTokens": 168,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12266
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 168,
+            "outputTokens": 88,
+            "cacheReadTokens": 12160,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12416
+          }
+        },
+        {
+          "step": 7,
+          "usage": {
+            "inputTokens": 240,
+            "outputTokens": 315,
+            "cacheReadTokens": 12416,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12971
+          }
+        }
+      ],
+      "artifact": "artifacts/A19/paths.py",
+      "artifact_sha256": "1aa6963bd2935d9164f0909e8b65e544cc25ae6a701f9846b499561f1bfe94d4",
+      "archive_sha256": "ee9d14bf72882b708ab2c004e7899c8f8606e13379d1caf8e01e33799ffd4b14",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A20",
+      "task": "paths",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3756,
+        "outputTokens": 713,
+        "cacheReadTokens": 55936,
+        "cacheWriteTokens": 0,
+        "totalTokens": 60405
+      },
+      "model_requests": 6,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 11859,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 70,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9044
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 251,
+            "outputTokens": 80,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9291
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 375,
+            "outputTokens": 70,
+            "cacheReadTokens": 9216,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9661
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 736,
+            "outputTokens": 219,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10555
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 249,
+            "outputTokens": 106,
+            "cacheReadTokens": 10368,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10723
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 339,
+            "outputTokens": 168,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11131
+          }
+        }
+      ],
+      "artifact": "artifacts/A20/paths.py",
+      "artifact_sha256": "e467ebca0a6075bdc9095071a2556434a366f6d4bc6477a76d8efb90ead3a9a8",
+      "archive_sha256": "f62775b56a972beac6f85deebab05647938376cf61ff6f0dd8a6ce959fcf6b19",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "c385e6e58a933ad930c4ba967ade21ff0ef88b61d8064461ec2be2f7118ede63",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A21",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4322,
+        "outputTokens": 3221,
+        "cacheReadTokens": 64640,
+        "cacheWriteTokens": 0,
+        "totalTokens": 72183
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 1,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 2,
+      "inspect_read_calls": 2,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 27307,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 160,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9098
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 786,
+            "outputTokens": 71,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9945
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 962,
+            "outputTokens": 1653,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12471
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 245,
+            "outputTokens": 82,
+            "cacheReadTokens": 12288,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12615
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 333,
+            "outputTokens": 1028,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13905
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 226,
+            "outputTokens": 227,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14149
+          }
+        }
+      ],
+      "artifact": "artifacts/A21/patcher.py",
+      "artifact_sha256": "8816ff2ac271f7acb8a6aa40c5ec601bbb91bc2384196c87cc2f9cd6337a8dad",
+      "archive_sha256": "0e50d436f733f774fc009c5cc0c9ffd7cd4c7b578d2622d319869010b1d43f66",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A22",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 5479,
+        "outputTokens": 5123,
+        "cacheReadTokens": 142080,
+        "cacheWriteTokens": 0,
+        "totalTokens": 152682
+      },
+      "model_requests": 11,
+      "tool_calls": 13,
+      "tool_errors": 1,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 2,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 5,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 40026,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 169,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9107
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 587,
+            "outputTokens": 71,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9746
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 891,
+            "outputTokens": 2552,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13171
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 177,
+            "outputTokens": 60,
+            "cacheReadTokens": 13056,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13293
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 589,
+            "outputTokens": 492,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14265
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 249,
+            "outputTokens": 100,
+            "cacheReadTokens": 14080,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14429
+          }
+        },
+        {
+          "step": 7,
+          "usage": {
+            "inputTokens": 337,
+            "outputTokens": 147,
+            "cacheReadTokens": 14336,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14820
+          }
+        },
+        {
+          "step": 8,
+          "usage": {
+            "inputTokens": 148,
+            "outputTokens": 60,
+            "cacheReadTokens": 14720,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14928
+          }
+        },
+        {
+          "step": 9,
+          "usage": {
+            "inputTokens": 342,
+            "outputTokens": 545,
+            "cacheReadTokens": 14848,
+            "cacheWriteTokens": 0,
+            "totalTokens": 15735
+          }
+        },
+        {
+          "step": 10,
+          "usage": {
+            "inputTokens": 192,
+            "outputTokens": 628,
+            "cacheReadTokens": 15616,
+            "cacheWriteTokens": 0,
+            "totalTokens": 16436
+          }
+        },
+        {
+          "step": 11,
+          "usage": {
+            "inputTokens": 197,
+            "outputTokens": 299,
+            "cacheReadTokens": 16256,
+            "cacheWriteTokens": 0,
+            "totalTokens": 16752
+          }
+        }
+      ],
+      "artifact": "artifacts/A22/patcher.py",
+      "artifact_sha256": "c0168f7fcfc1f2313f597936c7670f71cd4dc2bb5c39636b6658d8953c7ff918",
+      "archive_sha256": "40751016db3aa403604fc8be17987b1850a1470c88596936b17f1fdd115b3f64",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A23",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3762,
+        "outputTokens": 1016,
+        "cacheReadTokens": 57088,
+        "cacheWriteTokens": 0,
+        "totalTokens": 61866
+      },
+      "model_requests": 6,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13193,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 39,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9013
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 220,
+            "outputTokens": 70,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9250
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 349,
+            "outputTokens": 71,
+            "cacheReadTokens": 9216,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9636
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 909,
+            "outputTokens": 577,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11086
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 140,
+            "outputTokens": 64,
+            "cacheReadTokens": 11008,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11212
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 338,
+            "outputTokens": 195,
+            "cacheReadTokens": 11136,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11669
+          }
+        }
+      ],
+      "artifact": "artifacts/A23/patcher.py",
+      "artifact_sha256": "f8f339d590c069d63e51c261c96fd55f10b3f641006e50d2e1408dc209814d84",
+      "archive_sha256": "dca93f91ddde5681b5ced2ebc5154ab7d7616bcc8b2128905dfdc8ea2962eecd",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A24",
+      "task": "patch",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 3883,
+        "outputTokens": 1413,
+        "cacheReadTokens": 48512,
+        "cacheWriteTokens": 0,
+        "totalTokens": 53808
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14011,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 604,
+            "outputTokens": 82,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9646
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 919,
+            "outputTokens": 913,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11432
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 230,
+            "outputTokens": 88,
+            "cacheReadTokens": 11264,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11582
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 324,
+            "outputTokens": 218,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12062
+          }
+        }
+      ],
+      "artifact": "artifacts/A24/patcher.py",
+      "artifact_sha256": "855d141123deababc0dd253343c24987f786677f8046cbf3438761643be9eac3",
+      "archive_sha256": "4ae58452566e06d2cf4c7cbab4cb30092d940ea5506e37287d41c85bf60caed2",
+      "expected_frozen_hashes": {
+        "test_patcher.py": "05dba018ef30346bbe8dcc6a8f5098fe1a2e633d25ebf88f35045a6f55dde1b7",
+        "CONTRACT.md": "514e8683e16b58231530ec963b3a8471255813c85570557cda0853fedd77e74c",
+        "TASK.md": "31dd02461682edd931e837602243a8540735325228aa779c633c0916b3a3782b",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A25",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4508,
+        "outputTokens": 3570,
+        "cacheReadTokens": 62592,
+        "cacheWriteTokens": 0,
+        "totalTokens": 70670
+      },
+      "model_requests": 6,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 5,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 25906,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 125,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9063
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 447,
+            "outputTokens": 49,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9456
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 175,
+            "outputTokens": 72,
+            "cacheReadTokens": 9344,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9591
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 1434,
+            "outputTokens": 2851,
+            "cacheReadTokens": 9472,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13757
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 255,
+            "outputTokens": 108,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14059
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 427,
+            "outputTokens": 365,
+            "cacheReadTokens": 13952,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14744
+          }
+        }
+      ],
+      "artifact": "artifacts/A25/limiter.py",
+      "artifact_sha256": "2fdd59332a2f21fbb61ec0e5ab3bfe4c7ae52f777f3fb19ac0b5c73bffdd9a7c",
+      "archive_sha256": "6d8eb15f7808857deb47843d9ab020a5b9c85b6191b774500a3feef914bec149",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A26",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4412,
+        "outputTokens": 1342,
+        "cacheReadTokens": 49280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 55034
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13430,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 633,
+            "outputTokens": 83,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9676
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1391,
+            "outputTokens": 809,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11800
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 215,
+            "outputTokens": 88,
+            "cacheReadTokens": 11648,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11951
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 367,
+            "outputTokens": 250,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12521
+          }
+        }
+      ],
+      "artifact": "artifacts/A26/limiter.py",
+      "artifact_sha256": "fefed6e52effa7acdfff9c4b53b76ddab44895a614f600294c4f855ce712478c",
+      "archive_sha256": "83c8a16d6b92aac7948dcf4923e18109dfc6d084657c7d97e2bd19cfdae722ae",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A27",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4765,
+        "outputTokens": 5866,
+        "cacheReadTokens": 51328,
+        "cacheWriteTokens": 0,
+        "totalTokens": 61959
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 2,
+      "inspect_read_calls": 2,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 41350,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 252,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9190
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 909,
+            "outputTokens": 84,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10081
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1412,
+            "outputTokens": 1197,
+            "cacheReadTokens": 9984,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12593
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 240,
+            "outputTokens": 130,
+            "cacheReadTokens": 12416,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12786
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 434,
+            "outputTokens": 4203,
+            "cacheReadTokens": 12672,
+            "cacheWriteTokens": 0,
+            "totalTokens": 17309
+          }
+        }
+      ],
+      "artifact": "artifacts/A27/limiter.py",
+      "artifact_sha256": "d941564e80318499a7f5eb997bfc2b311323c322f4cfcbf72917231d641110f4",
+      "archive_sha256": "0a7df676ddc9b28b0edf5fdccedd56208792e8d1dd828ce67b081ece03a62543",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A28",
+      "task": "limiter",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4431,
+        "outputTokens": 1166,
+        "cacheReadTokens": 49024,
+        "cacheWriteTokens": 0,
+        "totalTokens": 54621
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13334,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 111,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9085
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 632,
+            "outputTokens": 84,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9676
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1391,
+            "outputTokens": 704,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11695
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 238,
+            "outputTokens": 62,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11820
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 364,
+            "outputTokens": 205,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12345
+          }
+        }
+      ],
+      "artifact": "artifacts/A28/limiter.py",
+      "artifact_sha256": "dfd047f80e760689818f4a6cb50458c03a739970836776c958a39da8798c99ba",
+      "archive_sha256": "f066b4294330e59c2c12fb6114b27bc85e202c9ffb5da8cd63378d3e18c4a200",
+      "expected_frozen_hashes": {
+        "test_limiter.py": "ab3d5d18d0209fded5d251c7e52e2251b129ccfecc183a2787445af6fdcc92b0",
+        "CONTRACT.md": "abecdb3e89c66cbb9fbcfcaaa83b20cf87bca7c1e6dc77a780af1832e0b25409",
+        "TASK.md": "d89e688854519d1841f733866e51c818120165db37259acf7bfdf21832093383",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A29",
+      "task": "join",
+      "repetition": 2,
+      "arm": "none_low",
+      "effort": "low",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 3892,
+        "outputTokens": 2046,
+        "cacheReadTokens": 49536,
+        "cacheWriteTokens": 0,
+        "totalTokens": 55474
+      },
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 18490,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 80,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9018
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 421,
+            "outputTokens": 83,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9464
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1176,
+            "outputTokens": 1507,
+            "cacheReadTokens": 9344,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12027
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 186,
+            "outputTokens": 109,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12199
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 339,
+            "outputTokens": 267,
+            "cacheReadTokens": 12160,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12766
+          }
+        }
+      ],
+      "artifact": "artifacts/A29/joiner.py",
+      "artifact_sha256": "4d93bf4c6554b4482f97f137c4647a8024bfcff33745d08896550e0079cd8a22",
+      "archive_sha256": "199ab4b89988f13d6d8c9e0981a11b8a90eb29adaed2a59a2900f3e5125ed7f4",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A30",
+      "task": "join",
+      "repetition": 2,
+      "arm": "none_high",
+      "effort": "high",
+      "skill_expected": false,
+      "skill_loaded": false,
+      "treatment_adherence": true,
+      "skill_load_calls": 0,
+      "usage": {
+        "inputTokens": 4553,
+        "outputTokens": 3531,
+        "cacheReadTokens": 66944,
+        "cacheWriteTokens": 0,
+        "totalTokens": 75028
+      },
+      "model_requests": 6,
+      "tool_calls": 10,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 1,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 5,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 27053,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8938,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1770,
+            "outputTokens": 150,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9088
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 475,
+            "outputTokens": 172,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9735
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1553,
+            "outputTokens": 2035,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13316
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 195,
+            "outputTokens": 127,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13506
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 366,
+            "outputTokens": 706,
+            "cacheReadTokens": 13440,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14512
+          }
+        },
+        {
+          "step": 6,
+          "usage": {
+            "inputTokens": 194,
+            "outputTokens": 341,
+            "cacheReadTokens": 14336,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14871
+          }
+        }
+      ],
+      "artifact": "artifacts/A30/joiner.py",
+      "artifact_sha256": "03db28dfee2ef8afcf6ef8582ec1cabe29845061f8f3d5e842d012f6c08f85e1",
+      "archive_sha256": "ca56752c4418324623b0d918afbca65c7920847e000365654eed16ba3c34bcb8",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e"
+      }
+    },
+    {
+      "run": "A31",
+      "task": "join",
+      "repetition": 2,
+      "arm": "skill_high",
+      "effort": "high",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4140,
+        "outputTokens": 2777,
+        "cacheReadTokens": 51328,
+        "cacheWriteTokens": 0,
+        "totalTokens": 58245
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 21161,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 652,
+            "outputTokens": 79,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9691
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1147,
+            "outputTokens": 2054,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12801
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 192,
+            "outputTokens": 107,
+            "cacheReadTokens": 12672,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12971
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 343,
+            "outputTokens": 425,
+            "cacheReadTokens": 12928,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13696
+          }
+        }
+      ],
+      "artifact": "artifacts/A31/joiner.py",
+      "artifact_sha256": "344409e22663e7e022004cd36ba611780bb3b43fcd55264888d948860056e864",
+      "archive_sha256": "d50d6ef848e8e13697f1534d11456b8b85f815a284686ffec67ce6198f405a20",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "A32",
+      "task": "join",
+      "repetition": 2,
+      "arm": "skill_low",
+      "effort": "low",
+      "skill_expected": true,
+      "skill_loaded": true,
+      "treatment_adherence": true,
+      "skill_load_calls": 1,
+      "usage": {
+        "inputTokens": 4204,
+        "outputTokens": 2197,
+        "cacheReadTokens": 50560,
+        "cacheWriteTokens": 0,
+        "totalTokens": 56961
+      },
+      "model_requests": 5,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "failed_skill_lookups": 0,
+      "post_success_test_tool_calls": 0,
+      "native_write_unread_errors": 0,
+      "native_read_calls": 4,
+      "inspect_read_calls": 0,
+      "terminal_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 20741,
+      "all_checks_passed": true,
+      "quality_passed": true,
+      "tool_schema_json_chars": 24783,
+      "tool_count": 30,
+      "first_request_input_tokens": 8974,
+      "request_usage": [
+        {
+          "step": 1,
+          "usage": {
+            "inputTokens": 1806,
+            "outputTokens": 109,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9083
+          }
+        },
+        {
+          "step": 2,
+          "usage": {
+            "inputTokens": 649,
+            "outputTokens": 72,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9681
+          }
+        },
+        {
+          "step": 3,
+          "usage": {
+            "inputTokens": 1137,
+            "outputTokens": 1728,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12465
+          }
+        },
+        {
+          "step": 4,
+          "usage": {
+            "inputTokens": 240,
+            "outputTokens": 88,
+            "cacheReadTokens": 12288,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12616
+          }
+        },
+        {
+          "step": 5,
+          "usage": {
+            "inputTokens": 372,
+            "outputTokens": 200,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13116
+          }
+        }
+      ],
+      "artifact": "artifacts/A32/joiner.py",
+      "artifact_sha256": "844d8623965a32546463dab440cedcae4b75f9ea91d05c5adafd1a7c838f2f95",
+      "archive_sha256": "1ebc526ec16f169504103e4bc614e3002ac885bcf2c0f8f63af922ca4f279ba3",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "b7df59d5e54cddf82a76d68e76e5bb259b9a4a2954b99d30b4eb19353447754d",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    }
+  ],
+  "limitations": [
+    "Frozen tasks reused; this is an intervention/effort study, not a new-task generalization test.",
+    "Skill effect includes installation, discovery and loading with an identical conditional invocation prompt, not just the 94-character body.",
+    "Cache warmth is not controllable; report uncached, cached and output components separately.",
+    "A fixed-budget descriptive study; no power calculation or universal quality claim.",
+    "No global setting change; single-turn desktop-bundled headless engine, not GUI or production validation."
+  ],
+  "accounting": "All committed assistant request usages; cached input, uncached input and output reported separately. No title usage or unknown in-flight usage is fabricated. No monetary claim.",
+  "local_date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "host": {
+    "harness": "0.2.1-rc.3",
+    "tools": "dsh-ops shell/file 0.3.0",
+    "entry": "desktop-bundled headless CLI",
+    "version_observation": "Package manifests checked after this batch; executable path shared by all runs. Binary was not snapshot-pinned. Previous experiments recorded rc.2 and are not pooled."
+  },
+  "prompt_snapshot": "../prompts/v0.1.0.txt",
+  "runtime_skill_changed": false,
+  "provenance": "Sanitized local observations, with exact raw session archives retained privately. Public hashes identify retained archives but do not independently verify original usage.",
+  "profile_control": {
+    "patches_equal_after_reasoningEffort_normalization": true,
+    "fields_changed": [
+      "reasoningEffort"
+    ],
+    "note": "Private patch contents compared locally; credentials and machine paths are not published."
+  }
+}

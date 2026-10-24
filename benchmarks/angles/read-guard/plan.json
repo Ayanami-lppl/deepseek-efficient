@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "design": "2 read paths x 2 independent fixture repetitions, balanced ABBA order",
+  "max_trials": 4,
+  "trials": [
+    {
+      "id": "G01",
+      "task": "read_guard",
+      "arm": "inspect",
+      "effort": "high",
+      "editable": [
+        "marker.txt"
+      ],
+      "frozen_hashes": {
+        "AGENTS.md": "bcae1e732aa8c8c7820224bfecab8ed7b593080ce9204ef0e1ac6689e250d3f2"
+      },
+      "prompt": "只进行工具兼容性测试。先用 ops_inspect_local_file 查看当前目录 marker.txt 的完整内容，再用原生 write 把内容改为 after（末尾换行）。不要使用 edit 或 shell。如果 write 报告文件未读取，仅用原生 read 补读，再用 write 重试一次。完成后简短报告观察结果，不再修改其他文件。"
+    },
+    {
+      "id": "G02",
+      "task": "read_guard",
+      "arm": "read",
+      "effort": "high",
+      "editable": [
+        "marker.txt"
+      ],
+      "frozen_hashes": {
+        "AGENTS.md": "bcae1e732aa8c8c7820224bfecab8ed7b593080ce9204ef0e1ac6689e250d3f2"
+      },
+      "prompt": "只进行工具兼容性测试。先用 原生 read 查看当前目录 marker.txt 的完整内容，再用原生 write 把内容改为 after（末尾换行）。不要使用 edit 或 shell。如果 write 报告文件未读取，仅用原生 read 补读，再用 write 重试一次。完成后简短报告观察结果，不再修改其他文件。"
+    },
+    {
+      "id": "G03",
+      "task": "read_guard",
+      "arm": "read",
+      "effort": "high",
+      "editable": [
+        "marker.txt"
+      ],
+      "frozen_hashes": {
+        "AGENTS.md": "bcae1e732aa8c8c7820224bfecab8ed7b593080ce9204ef0e1ac6689e250d3f2"
+      },
+      "prompt": "只进行工具兼容性测试。先用 原生 read 查看当前目录 marker.txt 的完整内容，再用原生 write 把内容改为 after（末尾换行）。不要使用 edit 或 shell。如果 write 报告文件未读取，仅用原生 read 补读，再用 write 重试一次。完成后简短报告观察结果，不再修改其他文件。"
+    },
+    {
+      "id": "G04",
+      "task": "read_guard",
+      "arm": "inspect",
+      "effort": "high",
+      "editable": [
+        "marker.txt"
+      ],
+      "frozen_hashes": {
+        "AGENTS.md": "bcae1e732aa8c8c7820224bfecab8ed7b593080ce9204ef0e1ac6689e250d3f2"
+      },
+      "prompt": "只进行工具兼容性测试。先用 ops_inspect_local_file 查看当前目录 marker.txt 的完整内容，再用原生 write 把内容改为 after（末尾换行）。不要使用 edit 或 shell。如果 write 报告文件未读取，仅用原生 read 补读，再用 write 重试一次。完成后简短报告观察结果，不再修改其他文件。"
+    }
+  ],
+  "hypothesis": "ops_inspect_local_file does not establish native write read-observation; native read does",
+  "scope": "Reproduce interoperability only; not a prompt-efficiency estimate.",
+  "fixture": {
+    "files": {
+      "marker.txt": "before\n",
+      "AGENTS.md": "本目录是合成工具兼容性测试，只处理本目录marker.txt，不读个人记忆、不访问网络、不改目录外文件或系统设置。按请求执行固定步骤，不调用shell。\n"
+    },
+    "expected_marker": "after\n"
+  }
+}

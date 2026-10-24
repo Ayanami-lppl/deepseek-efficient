@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scope": "Observable request/tool records only; no hidden reasoning text published.",
+  "previous_experiment": "focused",
+  "write_guard_case": {
+    "run": "F02",
+    "observed_error": "native write rejected the file as unread after ops_inspect_local_file inspection",
+    "recovery_request_steps": [
+      4,
+      5
+    ],
+    "recovery_requests_reported_tokens": 29528,
+    "qualification": "This counts observed recovery requests, not a guaranteed counterfactual saving."
+  },
+  "extra_checks_cases": [
+    {
+      "run": "F07",
+      "observation": "Separate working-directory discovery and additional checks after unittest; extra cyclic-input checks exceeded the acyclic-input task domain."
+    },
+    {
+      "run": "F14",
+      "observation": "Separate additional contract checks after the prescribed unittest command."
+    }
+  ],
+  "input_components": {
+    "original": {
+      "inputTokens": 33622,
+      "outputTokens": 12006,
+      "cacheReadTokens": 454272,
+      "cacheWriteTokens": 0,
+      "totalTokens": 499900
+    },
+    "candidate": {
+      "inputTokens": 34332,
+      "outputTokens": 14110,
+      "cacheReadTokens": 427776,
+      "cacheWriteTokens": 0,
+      "totalTokens": 476218
+    },
+    "original_cached_fraction": 0.9087257451490298,
+    "candidate_cached_fraction": 0.898277679550122
+  },
+  "initial_request_sample": {
+    "run": "F01",
+    "input_tokens": 8962,
+    "tool_count": 30,
+    "tool_schema_json_chars": 24783,
+    "qualification": "Tool-schema characters are a serialization-size observation, not tokenizer counts or a token-attribution estimate. request/context systemPromptUpdate is a status marker, not prompt content."
+  },
+  "source_limit": "Private exact archives retained; public aggregates cannot independently verify original usage."
+}

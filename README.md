@@ -31,6 +31,7 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 - [完整安装、更新与卸载](docs/INSTALL.md)
 - [任务示例与档位选择](docs/USAGE.md)
 - [未加载、重复安装、环境问题等排查](docs/TROUBLESHOOTING.md)
+- [Harness 读取检查与工具衔接](docs/HARNESS-TOOLS.md)
 - [变更记录](CHANGELOG.md) · [贡献与验证方法](CONTRIBUTING.md)
 
 ## 实测与边界
@@ -41,6 +42,7 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 - **新增规则与档位比较**：终端执行、变化文件重读、多文件目录及两轮交接，共 12 个会话。全部通过代码与指定验证检查；候选“避免重复加载”规则在 High 下比原版多 6.28% token，未被采用。Low 的描述性结果与两次环境失败试运行也完整披露。见 [扩展报告与数据](benchmarks/extended/README.md)。
 - **验收与不确定点候选（实验版）**：99 字符改写，两个新任务共 8 个会话，全部通过验收。本次总 token 少 11.45%，但只赢 2/4 配对，未达到预定稳定性条件，正式正文保持原样。见 [候选、完整结果与隔离试用](benchmarks/reasoning/README.md)。
 - **读取与验证顺序候选（实验版）**：95 字符改写，四个新任务共 16 个会话，全部通过验收。请求与工具次数减少，总 token 少 4.74%，但仅赢 4/8 配对，输出 token 增加 17.52%，未达到预定条件。见 [完整结果、逐任务差异与候选](benchmarks/focused/README.md)。
+- **技能有无 × High/Low**：在 rc.3 宿主中完成 32 次同期交叉对照，全部通过验收。正式技能在 High 下相对无技能少 36.01% token、赢 8/8 配对；已有技能后再调 Low 只少 2.57%。另用 4 次独立复现确认预览工具与原生 write 的读取检查衔接问题。见 [本轮原因分析、四组结果与边界](benchmarks/angles/README.md)。
 
 这些是小样本观测，**不是通用节省率、费用承诺或推理能力提升证明**。总 token 包含缓存输入、加载与工具反馈、推理及答案输出；没有 usage 的会话命名请求不计入。扩展实验没有无技能组，两份报告不能混合计算新的节省率。原始私人会话不公开，公开材料只能复跑代码验收和检查脱敏数据的一致性，不能独立核验全部模型调用。
 
