@@ -1,0 +1,36 @@
+name: Installation or behavior issue
+description: Report a reproducible loading, execution or quality problem.
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Host, version, model and reasoning effort
+      description: Include the skill version and project installation method.
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Minimal synthetic task and acceptance criteria
+      description: Use synthetic data and remove private paths and identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and observed behavior
+      description: Include actual validation results and whether the skill was loaded.
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: Optional token accounting and tool trace
+      description: Count all steps and clarify cached input, failures and missing usage.
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Public report
+      options:
+        - label: I removed credentials, private content and personal identifiers.
+          required: true

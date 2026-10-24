@@ -7,3 +7,7 @@ __pycache__/
 local/
 .DS_Store
 Thumbs.db
+dist/
+.pytest_cache/
+*.jsonl
+*.zstd

@@ -1,0 +1,105 @@
+{
+  "design": "2 scenarios x 3 arms x 2 repetitions; initial task plus handoff follow-up",
+  "adoption": "Use candidate only when all new_high scenarios pass code, fixture-integrity and requested-validation checks and total committed request tokens are no greater than old_high. Otherwise retain v0.1.0 runtime instructions.",
+  "max_trials": 12,
+  "agents": "本目录是合成隔离任务。只处理本目录，勿读取个人记忆、访问网络或修改目录外文件。应运行要求的本地Python测试；保留测试、合同和生成器原样。同一执行环境错误出现两次就停止并报告；不要修改系统权限、全局环境或转向目录外排查。\n",
+  "followup": "请提供这项任务的交接摘要：修改了什么、已实际执行的验证及未覆盖范围。不要修改文件。",
+  "trials": [
+    {
+      "id": "N01",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "old_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N01。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N02",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "new_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N02。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N03",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "new_low",
+      "effort": "low",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N03。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N04",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "new_low",
+      "effort": "low",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N04。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N05",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "new_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N05。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N06",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "old_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N06。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N07",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "new_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N07。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N08",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "old_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N08。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N09",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "new_low",
+      "effort": "low",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N09。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N10",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "old_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N10。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N11",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "new_low",
+      "effort": "low",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N11。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    },
+    {
+      "id": "N12",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "new_high",
+      "effort": "high",
+      "prompt": "请使用本项目的 deepseek-efficient 技能处理独立任务 N12。读取 TASK.md 并完成要求。所有资料均为合成数据，只操作当前目录；请执行规定的Python验证。"
+    }
+  ]
+}

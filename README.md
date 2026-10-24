@@ -1,75 +1,64 @@
 # DeepSeek Efficient
 
-用于 DeepSeek Agent 的轻量技能：减少重复分析与无效操作，保留任务正确性、必要验证和完整交付。
+[![Offline checks](https://github.com/Ayanami-lppl/deepseek-efficient/actions/workflows/check.yml/badge.svg)](https://github.com/Ayanami-lppl/deepseek-efficient/actions/workflows/check.yml)
 
-A small, prompt-only Agent Skill for DeepSeek. No API key, service, package installation or background process is required by the skill itself.
+用于 DeepSeek Agent 的轻量技能：减少重复分析，保留正确性、必要验证和完整交付。
 
-首版 **v0.1.0** 保留经过实测的 94 字符正文。使用标准 `SKILL.md` 格式；已在 DeepSeek Harness 中验证技能加载和文件工具任务。其他宿主尚未验证。
+A small, prompt-only Agent Skill for DeepSeek. The skill itself requires no API key, package installation, service or background process.
 
-## 安装到 DeepSeek Harness 项目
+当前版本 **v0.1.1**。正文保持经过实测的 **94 字符**；本次补齐安装、排障、离线验收、CI 和精简发布包。兼容标准 SKILL.md 格式，已验证 DeepSeek Harness 项目级加载及 headless 文件、终端任务；其他宿主尚未完成行为验证。
 
-在你准备用 Harness 打开的**目标项目目录**中执行：
+## 安装与使用
+
+在准备用 Harness 打开的**目标项目根目录**执行：
 
 ```powershell
 New-Item -ItemType Directory -Force .agents/skills | Out-Null
-git clone --depth 1 --branch v0.1.0 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
+git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
 ```
 
-也可以从 [Releases](https://github.com/Ayanami-lppl/deepseek-efficient/releases) 下载源码压缩包，把包含 `SKILL.md` 的目录放成：
+无 Git 时，从 [v0.1.1 Release](https://github.com/Ayanami-lppl/deepseek-efficient/releases/tag/v0.1.1) 下载 deepseek-efficient-v0.1.1.zip 和 SHA256SUMS，核对哈希后，将解压的 deepseek-efficient 目录放入项目的 .agents/skills/。精简包只含技能、许可证、简短说明和文件哈希 manifest，便于避免把基准资料装进项目。
 
-```text
-你的项目/
-└── .agents/
-    └── skills/
-        └── deepseek-efficient/
-            └── SKILL.md
-```
-
-在 Harness 中打开该项目并新建会话，明确调用：
+在 Harness 打开项目、新建会话，明确调用：
 
 ```text
 请读取并使用当前项目 .agents/skills/deepseek-efficient/SKILL.md 技能，然后完成以下任务：
-（写下你的具体任务与验收标准）
+（写下具体任务与验收标准）
 ```
 
-运行轨迹中应出现 `skill` 加载 `deepseek-efficient`，或读取该目录 `SKILL.md` 的记录。技能正文无需再重复粘贴。技能本身不需要额外依赖；正常使用 Harness 所需的模型账号、网络和模型费用仍由宿主处理。
+轨迹中应出现 skill 加载 deepseek-efficient，或读取该 SKILL.md 的记录。技能正文无需再次粘贴。正常使用 Harness 的账号、网络与模型费用仍由宿主处理。
 
-## 适用范围
+- [完整安装、更新与卸载](docs/INSTALL.md)
+- [任务示例与档位选择](docs/USAGE.md)
+- [未加载、重复安装、环境问题等排查](docs/TROUBLESHOOTING.md)
+- [变更记录](CHANGELOG.md) · [贡献与验证方法](CONTRIBUTING.md)
 
-适合包含多步分析、文件读取与编辑的任务，尤其是出现重复复述、反复比较等价方案或无新增证据地重复检查时。简单问答是否值得加载，需要结合新增输入开销判断。建议先按需调用。
+## 实测与边界
 
-技能提供行为指导。推理档位、最大输出量和缓存策略通过宿主或接口配置；这段提示不保证精确限制内部推理 token。用户要求的测试、边界检查和交付物仍应完成。
+2026-10-24，Windows DeepSeek Harness 0.2.1-rc.2 桌面安装包自带 headless 入口，deepseek-account/deepseek-flash（界面名称 DeepSeek-V4.1-Flash），dsh-ops shell/file 0.3.0：
 
-## 实测摘要
+- **首版无技能 A/B**：两个修复任务、各两次配对重复，8 个独立会话。总 token 357,491 → 266,060，本次少 25.6%；8 个代码产物全部通过外部验收。见 [首版报告与数据](benchmarks/README.md)。
+- **新增规则与档位比较**：终端执行、变化文件重读、多文件目录及两轮交接，共 12 个会话。全部通过代码与指定验证检查；候选“避免重复加载”规则在 High 下比原版多 6.28% token，未被采用。Low 的描述性结果与两次环境失败试运行也完整披露。见 [扩展报告与数据](benchmarks/extended/README.md)。
 
-2026-10-24，在 Windows 桌面安装包自带的官方 **headless** 入口中，沿用 `deepseek-account / deepseek-flash / high`；桌面界面显示模型为 DeepSeek-V4.1-Flash / High。Harness 版本 0.2.1-rc.2，加载 dsh-ops shell/file 0.3.0。
+这些是小样本观测，**不是通用节省率、费用承诺或推理能力提升证明**。总 token 包含缓存输入、加载与工具反馈、推理及答案输出；没有 usage 的会话命名请求不计入。扩展实验没有无技能组，两份报告不能混合计算新的节省率。原始私人会话不公开，公开材料只能复跑代码验收和检查脱敏数据的一致性，不能独立核验全部模型调用。
 
-两个代码修复任务，每个任务两次配对重复，共 8 个独立 Agent 会话：
+技能适合多步任务中的重复复述、等价方案反复比较等情况。简单问答应考虑加载开销，建议按需调用。推理档位、输出上限与缓存由宿主或接口配置，提示词不能硬性控制内部推理 token；用户要求的测试和交付仍应完成。尚未验证 GUI 端到端、大仓库或长会话。
 
-- 请求 token 合计：基线 **357,491**，技能组 **266,060**，本次减少 **25.6%**。
-- 四组 token 均下降，单组降幅为 **3.7%—52.8%**。
-- 八个产物均通过外部验收：每个 CSV 产物 119 项、每个区间合并产物 310 项。
-- 模型请求步骤合计：29 → 23；工具调用合计：30 → 24。
+## 离线验证与打包
 
-总 token 包含缓存输入、技能加载、工具反馈和推理及答案输出。自动会话命名请求没有 usage，因此未计入。**这些数字是小样本观测，不是通用节省率或费用承诺。** GUI 端到端交互、终端开发、大仓库及长会话尚未验证；本次也没有证明模型的推理能力提升。
-
-完整口径、逐组数据和限制见 [benchmarks/README.md](benchmarks/README.md)。公开的合成任务与代码产物可在本地验收：
+Python 3.10+，只用标准库，不调用模型或网络：
 
 ```powershell
-python benchmarks/evaluate.py csv benchmarks/artifacts/T01/totals.py
-python benchmarks/evaluate.py intervals benchmarks/artifacts/T03/intervals.py
+python -X utf8 scripts/check_repository.py
+python -X utf8 scripts/build_release.py
 ```
 
-验收器仅使用 Python 标准库，不调用模型或联网。原始私人会话档案、个人记忆、凭据和机器路径未发布。公开 token 数据是本机观测的脱敏汇总，无法仅凭公开材料独立核验全部模型调用。
+检查覆盖：历史产物验收、扩展产物 unittest、原始错误代码负对照、提示与产物哈希、数据汇总、文档链接、基础隐私扫描及发布包校验。Windows/Linux、Python 3.10/3.14 的 CI 执行同一流程。构建在 dist/ 生成内容可复现的 ZIP 与 SHA256SUMS；基准验收会执行仓库内合成代码。
 
 ## 技能正文
 
 ```text
 按最短可靠路径求解。只分析决定答案的计算、约束和边界；选定可行解并完成必要核查后立即作答。无新矛盾不另列解法，不反复复述题目、格式或已确认结论。保留复杂任务必需的推理和用户要求的全部交付。
 ```
-
-## 版本与许可证
-
-当前版本：v0.1.0。正文与本次 Harness 实验所用版本一致。后续针对重复加载等现象的改动，将在复测后单独发布。
 
 [MIT License](LICENSE)。本项目是社区技能，与 DeepSeek 官方无隶属关系。

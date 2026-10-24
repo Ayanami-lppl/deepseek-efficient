@@ -1,0 +1,1023 @@
+{
+  "schema_version": 1,
+  "design": "2 scenarios x 3 arms x 2 repetitions; initial task plus handoff follow-up",
+  "complete": true,
+  "completed": 12,
+  "planned": 12,
+  "adoption_criterion": "Use candidate only when all new_high scenarios pass code, fixture-integrity and requested-validation checks and total committed request tokens are no greater than old_high. Otherwise retain v0.1.0 runtime instructions.",
+  "candidate_adopted": false,
+  "old_skill_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_skill_sha256": "c772181cd4a5484b82bcba1e5e9564e89480d99c68e69ed7ff70a1e07d7edd57",
+  "rows": [
+    {
+      "run": "N01",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "old_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5046,
+        "outputTokens": 2808,
+        "cacheReadTokens": 119936,
+        "cacheWriteTokens": 0,
+        "totalTokens": 127790
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4867,
+            "outputTokens": 2057,
+            "cacheReadTokens": 106752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 113676
+          },
+          "requests": 10,
+          "tool_calls": 13
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 179,
+            "outputTokens": 751,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14114
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 11,
+      "tool_calls": 13,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "1eb45ae260eb8879be1edb8a9187d116b601c79ff99398ed3e5698f3dd65e56a",
+      "artifact": "artifacts/N01/money.py",
+      "artifact_sha256": "9ae5b95e802704a9230dcacc625bae3d385a0e76cb7eab3bec1cc362b3a2e934",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N02",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "new_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5059,
+        "outputTokens": 3262,
+        "cacheReadTokens": 133120,
+        "cacheWriteTokens": 0,
+        "totalTokens": 141441
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4889,
+            "outputTokens": 2575,
+            "cacheReadTokens": 119424,
+            "cacheWriteTokens": 0,
+            "totalTokens": 126888
+          },
+          "requests": 11,
+          "tool_calls": 14
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 170,
+            "outputTokens": 687,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14553
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 12,
+      "tool_calls": 14,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "a7972909efe006da1b87d6899bab5f2b6f96a839178afdc510308d3bed6d8e90",
+      "artifact": "artifacts/N02/money.py",
+      "artifact_sha256": "1d86f329ae2db7f2f49706031ce9d8d2be2f3ce9bc1bd81178ad1b27f043e638",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N03",
+      "task": "reload",
+      "repetition": 1,
+      "arm": "new_low",
+      "effort": "low",
+      "usage": {
+        "inputTokens": 12234,
+        "outputTokens": 2616,
+        "cacheReadTokens": 109440,
+        "cacheWriteTokens": 0,
+        "totalTokens": 124290
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 12054,
+            "outputTokens": 1913,
+            "cacheReadTokens": 96512,
+            "cacheWriteTokens": 0,
+            "totalTokens": 110479
+          },
+          "requests": 10,
+          "tool_calls": 13
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 180,
+            "outputTokens": 703,
+            "cacheReadTokens": 12928,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13811
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 11,
+      "tool_calls": 13,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "1f2e6b56c29159eb965091ca2f1b27cd0f87e2ba02bb21e8742383aefbc80c71",
+      "artifact": "artifacts/N03/money.py",
+      "artifact_sha256": "912da93a952e62c6988d36829cea2d2bf786b2cf1f4942cc0db991cf26a36c8f",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N04",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "new_low",
+      "effort": "low",
+      "usage": {
+        "inputTokens": 4170,
+        "outputTokens": 1758,
+        "cacheReadTokens": 69248,
+        "cacheWriteTokens": 0,
+        "totalTokens": 75176
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 3967,
+            "outputTokens": 887,
+            "cacheReadTokens": 57728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 62582
+          },
+          "requests": 6,
+          "tool_calls": 8
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 203,
+            "outputTokens": 871,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12594
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 8,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "1ff533e7213be9fa9847f3c96cccbae0040d72bf1761b799195f9f8e513d4b1a",
+      "artifact": "artifacts/N04/src/cache.py",
+      "artifact_sha256": "09d840bf9f6dddab5a41ed6741844c053a34cdb23011dc44423ec92b8518b916",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    },
+    {
+      "run": "N05",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "new_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 6050,
+        "outputTokens": 1614,
+        "cacheReadTokens": 77184,
+        "cacheWriteTokens": 0,
+        "totalTokens": 84848
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 5828,
+            "outputTokens": 1093,
+            "cacheReadTokens": 63616,
+            "cacheWriteTokens": 0,
+            "totalTokens": 70537
+          },
+          "requests": 6,
+          "tool_calls": 10
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 222,
+            "outputTokens": 521,
+            "cacheReadTokens": 13568,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14311
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 10,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "61c82f2418f7ce3545d12ce9af150dda14cf57852f1207fe252a025601414d62",
+      "artifact": "artifacts/N05/src/cache.py",
+      "artifact_sha256": "24e3c84c3ca9f1a37aee34e3f400ca8f5804a23a78fadd6e3037a947e583dbc0",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    },
+    {
+      "run": "N06",
+      "task": "cache",
+      "repetition": 1,
+      "arm": "old_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4249,
+        "outputTokens": 1961,
+        "cacheReadTokens": 69248,
+        "cacheWriteTokens": 0,
+        "totalTokens": 75458
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 3992,
+            "outputTokens": 965,
+            "cacheReadTokens": 57728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 62685
+          },
+          "requests": 6,
+          "tool_calls": 8
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 257,
+            "outputTokens": 996,
+            "cacheReadTokens": 11520,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12773
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 8,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "88fdcfde4bcaa248af9b276957e270ea317ebaccad39493283bfce6dadd15bef",
+      "artifact": "artifacts/N06/src/cache.py",
+      "artifact_sha256": "09d840bf9f6dddab5a41ed6741844c053a34cdb23011dc44423ec92b8518b916",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    },
+    {
+      "run": "N07",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "new_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5785,
+        "outputTokens": 3883,
+        "cacheReadTokens": 139264,
+        "cacheWriteTokens": 0,
+        "totalTokens": 148932
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 5524,
+            "outputTokens": 2753,
+            "cacheReadTokens": 125184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 133461
+          },
+          "requests": 11,
+          "tool_calls": 14
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 261,
+            "outputTokens": 1130,
+            "cacheReadTokens": 14080,
+            "cacheWriteTokens": 0,
+            "totalTokens": 15471
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 12,
+      "tool_calls": 14,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "0d1751ac4bfd6629ed520de9e30507f4cee3462ef059bc02afea22867664bd3b",
+      "artifact": "artifacts/N07/money.py",
+      "artifact_sha256": "29f1193990b430adae46866dde30f98b2f1b77a4e630a58e3106f5677505624d",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N08",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "old_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5113,
+        "outputTokens": 3667,
+        "cacheReadTokens": 136832,
+        "cacheWriteTokens": 0,
+        "totalTokens": 145612
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4953,
+            "outputTokens": 2691,
+            "cacheReadTokens": 123008,
+            "cacheWriteTokens": 0,
+            "totalTokens": 130652
+          },
+          "requests": 11,
+          "tool_calls": 14
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 160,
+            "outputTokens": 976,
+            "cacheReadTokens": 13824,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14960
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 12,
+      "tool_calls": 14,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "8ca23bf38921a62ecd1b945cc17740085d325331ae3099a4fc56922ace28def0",
+      "artifact": "artifacts/N08/money.py",
+      "artifact_sha256": "59d564375b3346e32499f85b0a15cf6da982e0ef9332993da0fe6772c3e03056",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N09",
+      "task": "reload",
+      "repetition": 2,
+      "arm": "new_low",
+      "effort": "low",
+      "usage": {
+        "inputTokens": 5046,
+        "outputTokens": 3092,
+        "cacheReadTokens": 109440,
+        "cacheWriteTokens": 0,
+        "totalTokens": 117578
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4816,
+            "outputTokens": 2446,
+            "cacheReadTokens": 96000,
+            "cacheWriteTokens": 0,
+            "totalTokens": 103262
+          },
+          "requests": 9,
+          "tool_calls": 13
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 230,
+            "outputTokens": 646,
+            "cacheReadTokens": 13440,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14316
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 10,
+      "tool_calls": 13,
+      "skill_loads": 1,
+      "tool_errors": 1,
+      "unit_tests_passed": true,
+      "test_methods": 9,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "fdd82c95f208ec87b8d6e78e22e236f1722b69c8bb6cbbd985daa0c2b107e927",
+      "artifact": "artifacts/N09/money.py",
+      "artifact_sha256": "0e9d3d1a92676882e56465d9ad607cf6c7f367fb74938c7d4c014b7c540cb55e",
+      "expected_frozen_hashes": {
+        "refresh_rules.py": "984e89adf5ae85c6dbf0312830270819db207dbab0535654a3dba92c2efca1be",
+        "test_money.py": "b8e07f6c9fa8892088a5452c107bf0113c1ba9627bfb181cccf0500efb20bc76",
+        "fixtures/other_cwd/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "TASK.md": "e009fd0212b73383046f97690ad774e4b5d0080abb4eedb6fcf152cbb64304a9",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c"
+      }
+    },
+    {
+      "run": "N10",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "old_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4392,
+        "outputTokens": 2145,
+        "cacheReadTokens": 69760,
+        "cacheWriteTokens": 0,
+        "totalTokens": 76297
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4178,
+            "outputTokens": 1104,
+            "cacheReadTokens": 57984,
+            "cacheWriteTokens": 0,
+            "totalTokens": 63266
+          },
+          "requests": 6,
+          "tool_calls": 9
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 214,
+            "outputTokens": 1041,
+            "cacheReadTokens": 11776,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13031
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 9,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "70a60ad2f9eeebf8966d3a952ed8c42b49f6ddfa1da7016474c326dc87bcd370",
+      "artifact": "artifacts/N10/src/cache.py",
+      "artifact_sha256": "abfb553fe9a69f2d7ee17ca81376e29b56b58a9f4e1add59bd530ede70449161",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    },
+    {
+      "run": "N11",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "new_low",
+      "effort": "low",
+      "usage": {
+        "inputTokens": 5830,
+        "outputTokens": 1849,
+        "cacheReadTokens": 77056,
+        "cacheWriteTokens": 0,
+        "totalTokens": 84735
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 5627,
+            "outputTokens": 1342,
+            "cacheReadTokens": 63360,
+            "cacheWriteTokens": 0,
+            "totalTokens": 70329
+          },
+          "requests": 6,
+          "tool_calls": 9
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 203,
+            "outputTokens": 507,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14406
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 9,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "8310522ff07d8e33852004c241bd6f4d21e4f951dda09a0a14a69ac8afcfdd80",
+      "artifact": "artifacts/N11/src/cache.py",
+      "artifact_sha256": "fbe7f25bc8fc0bfee8530482ced5f086b4f90c40ea8a72fd93ca4b790c1e89ca",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    },
+    {
+      "run": "N12",
+      "task": "cache",
+      "repetition": 2,
+      "arm": "new_high",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4676,
+        "outputTokens": 1551,
+        "cacheReadTokens": 70400,
+        "cacheWriteTokens": 0,
+        "totalTokens": 76627
+      },
+      "per_turn": [
+        {
+          "turn": 1,
+          "usage": {
+            "inputTokens": 4479,
+            "outputTokens": 869,
+            "cacheReadTokens": 58496,
+            "cacheWriteTokens": 0,
+            "totalTokens": 63844
+          },
+          "requests": 6,
+          "tool_calls": 9
+        },
+        {
+          "turn": 2,
+          "usage": {
+            "inputTokens": 197,
+            "outputTokens": 682,
+            "cacheReadTokens": 11904,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12783
+          },
+          "requests": 1,
+          "tool_calls": 0
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 9,
+      "skill_loads": 1,
+      "tool_errors": 0,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "requested_terminal_verification_executed_and_passed": true,
+      "updated_rules_read_in_order": true,
+      "handoff_did_not_modify_files": true,
+      "route_correct": true,
+      "all_checks_passed": true,
+      "archive_sha256": "bc8decc8ee375056804628fd0f0cfc0ad250aa068ef8453bce7a54cd1b534160",
+      "artifact": "artifacts/N12/src/cache.py",
+      "artifact_sha256": "3ab12f1f61b751fe48722fdf832d85c1261134d0f00151c1de22ba0f7182f8ce",
+      "expected_frozen_hashes": {
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_cache.py": "a4d464aed990b5565148d5fb393810b6e1a655bb553d4ded5afa4a110e38ef44",
+        "README.md": "6cf2d53647ec7c18c65ce29ac6a30a8b1f02772425a4fff93f07158d60ee1014",
+        "CONTRACT.md": "528f79d34b5309efe3416b268b15918260934dd244daf58106b41527909b414a",
+        "TASK.md": "9cd39b42f0c28cd7be4bc269f3e6c23d16173e3409b9f9625c8c3d7192b1a9e2",
+        "AGENTS.md": "150852a25ffc78ef9a9770637143f33af14fdf85194a8d53768730801c60ef6c",
+        "docs/archive/note-00.md": "a44dc439a7dd7847cd23c0d894e5560a7c168141728c3f455a1d9a73b1bb8992",
+        "docs/archive/note-01.md": "7de3f4702131f8d32fc3b3efb897ac0334039bdd96a1f2fbe3b7535d8f80a898",
+        "docs/archive/note-02.md": "7fe3a7f4328533058ba3070d4618ae98d360241138c4fbeb68cb5f1fba4da9af",
+        "docs/archive/note-03.md": "2ed1a49be61b3dc7801b52c3e576d17878891b5972df0b24f89d5c4c7dc7aff3",
+        "docs/archive/note-04.md": "50b3c8e7783c422d6456e547a12eec17d0c030bdb714ea6e70ea96cb6d69e136",
+        "docs/archive/note-05.md": "d5203a4e29acfffe49c08ab8546cc67a17888759463a9d54b61cd01ec88e8477",
+        "docs/archive/note-06.md": "a4990fc9e8d3916588ae999c6df679ec13fbed69c4f65b052f3dbb26dd2d9d69",
+        "docs/archive/note-07.md": "0c7e8c45c4250db59c9fdee269c99766e5e90ed8bd600dd24de83e8c65a2dd38",
+        "docs/archive/note-08.md": "2959a56a6d896d24105faf0f583f24fd135eb37e92ad97a667b05765405c50e0",
+        "docs/archive/note-09.md": "21daf30fb2c079d3ad66b3b14f66ec644ab4972daf3de15c270e8dd0019330c9",
+        "docs/archive/note-10.md": "4f9a5b28e30358aae9ba412ff69b74dd4c3fe5ee6bc851deb41a3f1d7d8dd256",
+        "docs/archive/note-11.md": "f893e40758d21fef5198285969212b4bb68f739388a9b2e2036a71c1a81a1cc8",
+        "docs/archive/note-12.md": "c15476bcf2e24e5a2c4d276d2e71b82aa6c5f28900dfdbd0476ee58fc83a6e44",
+        "docs/archive/note-13.md": "9918412c81da4f434ee89b4bfe534804c517a9ca606c471421af953743ed9bf1",
+        "docs/archive/note-14.md": "1b0f53b527301d9ae2e613de9d47dd6759035962cdba3250ccdce0c70dd4cc03",
+        "docs/archive/note-15.md": "5aa4bd6cca6b37d1f10902982bd62b288ec67fa0b4481380fe3e47d6311b0981",
+        "docs/archive/note-16.md": "01c8bbd88bba046ebef907b3b45d6ac94d7857de545d97f51746db013c50e01e",
+        "docs/archive/note-17.md": "fee97fdd3d0a3717a3050ecd6d2391db7a2009b419414a074352daf0ba0301b2",
+        "docs/archive/note-18.md": "8881e68acc110a7a66e53304a5fbc9691a0e7023ba87b1c6189f8bf56589cbf1",
+        "docs/archive/note-19.md": "bd636f8259b639612e2b8f48868d10b16be02c6c08e665a456b502bd8919ea90",
+        "docs/archive/note-20.md": "66acad9908d332358927233c7781d2de07e7f4eecd166e2f76e2f353d650350f",
+        "docs/archive/note-21.md": "dc3d1747fa315ddcebd754f6e79ff6e73ecd958d384f6a6e062e0dc9573dc1b1",
+        "docs/archive/note-22.md": "d2a412a75503eb6baee6609914a488fe5d4bb81504738a19e93c8895555396a0",
+        "docs/archive/note-23.md": "b91300db2d93903e8aa5394d73c1ef06eefe1f9bbfb6021ca45e6e4470326968",
+        "docs/archive/note-24.md": "86512cddcd83d417b276cb2b6149d1dd1019ad25cbbe422fb6c19883e013753d",
+        "docs/archive/note-25.md": "230ac2a9502a6e9fa96567caee5d253ef8239d3a4a2c9488203b92a859714b9f",
+        "docs/archive/note-26.md": "fe151a932bdbb750415fad680e85fb812e350a7372d1ea5d2613b6ce3027f01b",
+        "docs/archive/note-27.md": "1ed3d55da2c92156f7a361842c096aa52e8a755d4bca7838367532797fad6898",
+        "docs/archive/note-28.md": "2a22d7027fe84c143b326d7bd15afbfee0497152bd9b88d30eb93c31352be054",
+        "docs/archive/note-29.md": "23d4ee2bd37fa0a12f5caf23bf4ef22d97577584ccae74b8de71eec322a77d4f"
+      }
+    }
+  ],
+  "totals": {
+    "old_high": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 18800,
+        "outputTokens": 10581,
+        "cacheReadTokens": 395776,
+        "cacheWriteTokens": 0,
+        "totalTokens": 425157
+      },
+      "requests": 37,
+      "tool_calls": 44
+    },
+    "new_high": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 21570,
+        "outputTokens": 10310,
+        "cacheReadTokens": 419968,
+        "cacheWriteTokens": 0,
+        "totalTokens": 451848
+      },
+      "requests": 38,
+      "tool_calls": 47
+    },
+    "new_low": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 27280,
+        "outputTokens": 9315,
+        "cacheReadTokens": 365184,
+        "cacheWriteTokens": 0,
+        "totalTokens": 401779
+      },
+      "requests": 35,
+      "tool_calls": 43
+    }
+  },
+  "environment": {
+    "excluded_pilots": [
+      {
+        "stage": "inherited PSModulePath",
+        "result": "module preparation conflict, then malformed tool JSON",
+        "initial_exit": 1
+      },
+      {
+        "stage": "clean process environment, temporary-directory fixture",
+        "result": "restricted process could not traverse a Python-created 0700 temporary directory; timeout after repeated diagnosis",
+        "timed_out": true
+      }
+    ],
+    "fixture_correction": "Use a pre-created project directory for the same working-directory-independence assertion. Tests and source API requirements remain equivalent.",
+    "subprocess_environment_change": "Only remove inherited PSModulePath",
+    "global_configuration_changed": false,
+    "max_final_trials": 12
+  },
+  "limitations": [
+    "Headless engine, not GUI end-to-end.",
+    "Two turns are context-reuse checks, not a long-session validation.",
+    "Low/high comparison applies only to candidate body and is descriptive."
+  ],
+  "date": "2026-10-24",
+  "published_skill_version": "0.1.1",
+  "runtime_instructions_changed": false,
+  "provenance": "Sanitized local observations; original session archives retained privately. Hashes identify archives but do not make their contents publicly independently verifiable.",
+  "host": {
+    "name": "DeepSeek Harness",
+    "version": "0.2.1-rc.2",
+    "entry": "desktop-bundled headless CLI",
+    "provider": "deepseek-account",
+    "model": "deepseek-flash",
+    "tools": "dsh-ops shell/file 0.3.0"
+  },
+  "prompt_snapshots": {
+    "old": "../prompts/v0.1.0.txt",
+    "candidate": "../prompts/candidate-no-reload.txt"
+  }
+}
