@@ -1,0 +1,64 @@
+import copy
+
+
+def _validate_row(row, key):
+    if not isinstance(row, dict):
+        raise ValueError("each row must be a dict")
+    for name in row:
+        if not isinstance(name, str) or not name:
+            raise ValueError("field names must be non-empty strings")
+    if key not in row:
+        raise ValueError("row is missing the join key")
+    value = row[key]
+    if not isinstance(value, str) or not value:
+        raise ValueError("join values must be non-empty strings")
+
+
+def _deepcopy(value):
+    try:
+        return copy.deepcopy(value)
+    except Exception:
+        raise ValueError("row value cannot be deep-copied")
+
+
+def left_join(left, right, key):
+    if not isinstance(left, list) or not isinstance(right, list):
+        raise ValueError("left and right must be lists")
+    if not isinstance(key, str) or not key:
+        raise ValueError("key must be a non-empty string")
+
+    for row in left:
+        _validate_row(row, key)
+    for row in right:
+        _validate_row(row, key)
+
+    index = {}
+    columns = []
+    seen = set()
+    for row in right:
+        value = row[key]
+        if value in index:
+            raise ValueError("duplicate right join value")
+        index[value] = row
+        for name in row:
+            if name != key and name not in seen:
+                seen.add(name)
+                columns.append(name)
+
+    prefixed = ["right." + name for name in columns]
+    for row in left:
+        for name in prefixed:
+            if name in row:
+                raise ValueError("left row already has a generated column")
+
+    result = []
+    for row in left:
+        out = {name: _deepcopy(value) for name, value in row.items()}
+        match = index.get(row[key])
+        for name, out_name in zip(columns, prefixed):
+            if match is not None and name in match:
+                out[out_name] = _deepcopy(match[name])
+            else:
+                out[out_name] = None
+        result.append(out)
+    return result

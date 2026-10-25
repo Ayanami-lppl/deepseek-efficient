@@ -7,7 +7,7 @@
 
 ```powershell
 New-Item -ItemType Directory -Force .agents/skills | Out-Null
-git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
+git clone --depth 1 --branch v0.2.0 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
 ```
 
 固定 tag 克隆可能显示 detached HEAD 提示，这是固定版本的正常状态。
@@ -15,12 +15,12 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 
 ## 无 Git 的精简 ZIP 安装
 
-1. 打开 [Releases](https://github.com/Ayanami-lppl/deepseek-efficient/releases)，下载 `deepseek-efficient-v0.1.1.zip` 和 `SHA256SUMS`。
-2. 用 `Get-FileHash .\deepseek-efficient-v0.1.1.zip -Algorithm SHA256` 查看压缩包哈希，与 SHA256SUMS 的对应行核对；哈希可识别下载内容变化，不能单独证明发布者身份。
+1. 打开 [Releases](https://github.com/Ayanami-lppl/deepseek-efficient/releases)，下载 `deepseek-efficient-v0.2.0.zip` 和 `SHA256SUMS`。
+2. 用 `Get-FileHash .\deepseek-efficient-v0.2.0.zip -Algorithm SHA256` 查看压缩包哈希，与 SHA256SUMS 的对应行核对；哈希可识别下载内容变化，不能单独证明发布者身份。
 3. 解压后把 `deepseek-efficient` 文件夹放到项目的 `.agents/skills/` 下。
 4. 在 Harness 中打开该项目并新建会话，明确调用技能。
 
-精简包只包含 SKILL.md、LICENSE、简短使用说明和 manifest.json；离线验收器及合成产物在源码仓库中。
+精简包包含 SKILL.md、LICENSE、简短使用说明、manifest.json，以及 scripts/check_result.py 和 references/log-output.md。默认正文不依赖 Python；只有显式使用日志工具时需要 Python 3.10+；离线验收器及合成产物在源码仓库中。
 
 ## 验证加载
 
@@ -36,7 +36,7 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 ```powershell
 git -C .agents/skills/deepseek-efficient status --short
 git -C .agents/skills/deepseek-efficient fetch --tags origin
-git -C .agents/skills/deepseek-efficient checkout v0.1.1
+git -C .agents/skills/deepseek-efficient checkout v0.2.0
 ```
 
 如果 status 显示本地修改，先备份或提交这些修改，再决定如何合并。

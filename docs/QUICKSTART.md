@@ -14,3 +14,5 @@
 [GitHub 文档](https://github.com/Ayanami-lppl/deepseek-efficient#readme)
 
 许可证：本目录 LICENSE。包内 manifest.json 列出版本及文件 SHA-256。
+
+可选：对长日志任务，可明确要求读取 [日志工具用法](https://github.com/Ayanami-lppl/deepseek-efficient/blob/main/references/log-output.md)，按需运行 scripts/check_result.py（Python 3.10+）。它仅读取原终端已完成的完整日志，不调用模型、不启动测试子进程。默认 94 字符正文保持独立；新工具未在小样本中降低总 token，不默认用于短任务。

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "type": "targeted narrative engineering search; not a systematic or exhaustive review",
+  "question": "Which training-free reasoning/context techniques can be implemented as a small DeepSeek Harness skill without changing model weights, credentials or global permissions?",
+  "inclusion": [
+    "Primary papers with identifiable authors/methods",
+    "Author-maintained GitHub repositories and official product documentation",
+    "Technique can be scoped, auditable and tested locally"
+  ],
+  "exclusion": [
+    "Unverified aggregator claims",
+    "Requires model training/inference-engine replacement for a prompt-only claim",
+    "Savings numbers transferred to DeepSeek without evaluation",
+    "Automatic global tool denial or background hooks outside task scope"
+  ],
+  "queries": [
+    "efficient reasoning token budget concise chain of thought short thought Chain of Draft official GitHub paper",
+    "DeepSeek V4 thinking mode prompting token efficiency reasoning effort official",
+    "GitHub token efficient coding agent context tools optimization SWE-agent Aider",
+    "site.anthropic.com/engineering code execution MCP context token tool output",
+    "site.aider.chat docs repomap token budget repository map",
+    "site.arxiv.org Token-Budget-Aware LLM Reasoning",
+    "site.github.com context-mode mksglu"
+  ],
+  "retrieval_gaps": [
+    "GeniusHTX/TALE GitHub link returned 404 through web retrieval; published ACL paper remains accessible.",
+    "CoD configs/gsm8k-cod.yaml returned 404; do not claim that file was read.",
+    "CoD retry resolved actual configs/gsm8k_cod.yaml at commit a7dbf5dea808b1aa1e12f7a90ea573321581df78 via GitHub; original wrong-path 404 retained as audit history."
+  ],
+  "scope_note": "Single-agent selective reading of primary sources; no database-wide export, PRISMA flow or meta-analysis."
+}

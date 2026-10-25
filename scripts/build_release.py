@@ -21,6 +21,8 @@ def build(root=ROOT, output=None):
         "SKILL.md": (root / "SKILL.md").read_bytes(),
         "LICENSE": (root / "LICENSE").read_bytes(),
         "README.md": (root / "docs" / "QUICKSTART.md").read_bytes(),
+        "scripts/check_result.py": (root / "scripts" / "check_result.py").read_bytes(),
+        "references/log-output.md": (root / "references" / "log-output.md").read_bytes(),
     }
     manifest = {
         "schema_version": 1,

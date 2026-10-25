@@ -35,3 +35,9 @@
 技能本身不会可靠地替你切换推理档位。
 
 本仓库把测试结果与适用范围记录在 [benchmarks/README.md](../benchmarks/README.md)，不把未测模型或工作流写成已支持。
+
+## 可选长日志工具
+
+只在需要保留完整长日志并返回摘要时，明确要求读取 [references/log-output.md](../references/log-output.md)，再决定是否使用随包提供的 scripts/check_result.py。短日志仍可直接看原结果。工具保留原命令与完整日志，返回调用方捕获的退出码、哈希、行号标记和有限尾部。失败时再定位日志，不减少测试。
+
+此能力没有加入默认 SKILL.md；修复后的配对实验中工具返回字符减少，但总 token 增加。见 [研究依据](RESEARCH.md) 与 [实验记录](../benchmarks/research/README.md)。

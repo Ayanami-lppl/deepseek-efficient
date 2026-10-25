@@ -1,0 +1,1071 @@
+{
+  "schema_version": 2,
+  "measurement_revision": "Retained native-shell log can establish verification even if buffered progress obscures OK in immediate tail; helper adherence evaluated separately.",
+  "observed_at": "2026-10-25T06:47:23.186Z",
+  "complete": true,
+  "completed": 8,
+  "planned": 8,
+  "design": "quiet versus synthetic verbose-log workload x original/candidate package x 2 repetitions; adjacent paired blocks, random first order reversed on second repetition",
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "6a4867c9188ab6ebd68ac63ac8c5e4d3a7bef127e200b00ee42e0bf12b99cb15",
+  "helper_sha256": "cd4c396cb19e70abe1024198b5942db7808545a1a78781d40bdbbb58a05f9ede",
+  "adoption_criterion": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "pair_wins_min": 3,
+    "pairs": 4,
+    "quiet_total_ratio_max": 1.05,
+    "verbose_total_ratio_max": 0.9,
+    "verbose_helper_adherence": true
+  },
+  "candidate_adopted": false,
+  "helper_adherence": false,
+  "totals": {
+    "original": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 17661,
+        "outputTokens": 6691,
+        "cacheReadTokens": 233600,
+        "cacheWriteTokens": 0,
+        "totalTokens": 257952
+      },
+      "model_requests": 23,
+      "tool_calls": 35,
+      "tool_result_chars": 27328,
+      "verification_result_chars": 7786,
+      "wall_ms": 71724
+    },
+    "candidate": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 18274,
+        "outputTokens": 8258,
+        "cacheReadTokens": 303360,
+        "cacheWriteTokens": 0,
+        "totalTokens": 329892
+      },
+      "model_requests": 28,
+      "tool_calls": 39,
+      "tool_result_chars": 25679,
+      "verification_result_chars": 6751,
+      "wall_ms": 89840
+    }
+  },
+  "task_totals": {
+    "quiet": {
+      "original_runs": 2,
+      "candidate_runs": 2,
+      "original_tokens": 115121,
+      "candidate_tokens": 115547,
+      "candidate_ratio": 1.0037004543046013,
+      "original_verification_chars": 1594,
+      "candidate_verification_chars": 1682
+    },
+    "verbose": {
+      "original_runs": 2,
+      "candidate_runs": 2,
+      "original_tokens": 142831,
+      "candidate_tokens": 214345,
+      "candidate_ratio": 1.500689626201595,
+      "original_verification_chars": 6192,
+      "candidate_verification_chars": 5069
+    }
+  },
+  "pairs": [
+    {
+      "task": "quiet",
+      "repetition": 1,
+      "original_tokens": 63344,
+      "candidate_tokens": 52040,
+      "candidate_wins": true
+    },
+    {
+      "task": "quiet",
+      "repetition": 2,
+      "original_tokens": 51777,
+      "candidate_tokens": 63507,
+      "candidate_wins": false
+    },
+    {
+      "task": "verbose",
+      "repetition": 1,
+      "original_tokens": 72053,
+      "candidate_tokens": 98151,
+      "candidate_wins": false
+    },
+    {
+      "task": "verbose",
+      "repetition": 2,
+      "original_tokens": 70778,
+      "candidate_tokens": 116194,
+      "candidate_wins": false
+    }
+  ],
+  "rows": [
+    {
+      "run": "L01",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5367,
+        "outputTokens": 2800,
+        "cacheReadTokens": 89984,
+        "cacheWriteTokens": 0,
+        "totalTokens": 98151
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 123,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 871,
+            "outputTokens": 107,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9938
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1300,
+            "outputTokens": 1184,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12340
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 242,
+            "outputTokens": 147,
+            "cacheReadTokens": 12160,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12549
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 148,
+            "outputTokens": 145,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12837
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 189,
+            "outputTokens": 182,
+            "cacheReadTokens": 12672,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13043
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 532,
+            "outputTokens": 271,
+            "cacheReadTokens": 12928,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13731
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 290,
+            "outputTokens": 641,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14627
+          }
+        }
+      ],
+      "model_requests": 8,
+      "tool_calls": 10,
+      "tool_errors": 0,
+      "tool_result_chars": 8374,
+      "verification_result_chars": 2977,
+      "helper_calls": 1,
+      "retained_logs": [
+        {
+          "log": ".agent-evidence/check-0001.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "hash_matches": true,
+          "size_matches": true,
+          "exit_code": 3221225794,
+          "command_executed_by_helper": true,
+          "output_omitted": false,
+          "test_count_matches": false,
+          "has_ok": false
+        }
+      ],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/check-0001.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "test_count_matches": false,
+          "has_ok": false
+        },
+        {
+          "log": ".agent-evidence/verify-full.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 29691,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L01/joiner.py",
+      "artifact_sha256": "2d3df6e3d334121f4d29204ba712021e1ac9a9089daf7373537b55738c74c783",
+      "archive_sha256": "cbf7725d5d35d95eaec27186c4a58fccb1dcb70d3514f03de9844e16284a0e12",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "6a4867c9188ab6ebd68ac63ac8c5e4d3a7bef127e200b00ee42e0bf12b99cb15",
+        ".agents/skills/deepseek-efficient/scripts/run_check.py": "cd4c396cb19e70abe1024198b5942db7808545a1a78781d40bdbbb58a05f9ede"
+      }
+    },
+    {
+      "run": "L02",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4895,
+        "outputTokens": 2774,
+        "cacheReadTokens": 64384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 72053
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9075
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 664,
+            "outputTokens": 115,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9739
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1229,
+            "outputTokens": 1655,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12612
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 258,
+            "outputTokens": 106,
+            "cacheReadTokens": 12416,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12780
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 592,
+            "outputTokens": 195,
+            "cacheReadTokens": 12672,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13459
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 357,
+            "outputTokens": 591,
+            "cacheReadTokens": 13440,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14388
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 8299,
+      "verification_result_chars": 3235,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 24658,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L02/joiner.py",
+      "artifact_sha256": "e904ce96897649d4735721be0b5c676d75a6425a15431856d5f27fd23278126e",
+      "archive_sha256": "e0646cfb92c7acc037c3a3686a0f59aba2e5feb076d862d1ab98b0817ad22a7d",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "L03",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3835,
+        "outputTokens": 845,
+        "cacheReadTokens": 47360,
+        "cacheWriteTokens": 0,
+        "totalTokens": 52040
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 115,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9078
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 661,
+            "outputTokens": 117,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9738
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 805,
+            "outputTokens": 280,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10813
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 250,
+            "outputTokens": 93,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10967
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 324,
+            "outputTokens": 240,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11444
+          }
+        }
+      ],
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "tool_result_chars": 4785,
+      "verification_result_chars": 792,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 12777,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L03/paths.py",
+      "artifact_sha256": "cbb5169b463e7ae0f80128dd4d81de88871a2bfcbf6a5c0a6530f7e6e8d24aa4",
+      "archive_sha256": "690305e477794904e1f82f74f76037710b1619349a8e34088d757ad431f1fdb8",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "6a4867c9188ab6ebd68ac63ac8c5e4d3a7bef127e200b00ee42e0bf12b99cb15",
+        ".agents/skills/deepseek-efficient/scripts/run_check.py": "cd4c396cb19e70abe1024198b5942db7808545a1a78781d40bdbbb58a05f9ede"
+      }
+    },
+    {
+      "run": "L04",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4131,
+        "outputTokens": 973,
+        "cacheReadTokens": 58240,
+        "cacheWriteTokens": 0,
+        "totalTokens": 63344
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 111,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9074
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 599,
+            "outputTokens": 76,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9635
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 401,
+            "outputTokens": 99,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10100
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 911,
+            "outputTokens": 350,
+            "cacheReadTokens": 9984,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11245
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 170,
+            "outputTokens": 98,
+            "cacheReadTokens": 11136,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11404
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 255,
+            "outputTokens": 239,
+            "cacheReadTokens": 11392,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11886
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 5756,
+      "verification_result_chars": 802,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14128,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L04/paths.py",
+      "artifact_sha256": "5ff3e45d42867e48d55f995e9614a2ddbada90611f097390baf36ea19f59928c",
+      "archive_sha256": "db197e428e8484b13452dbce4814ca5e72e922b462154af880a4a59083604927",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "L05",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4936,
+        "outputTokens": 2098,
+        "cacheReadTokens": 63744,
+        "cacheWriteTokens": 0,
+        "totalTokens": 70778
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 108,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9071
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 660,
+            "outputTokens": 101,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9721
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1339,
+            "outputTokens": 1444,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12383
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 157,
+            "outputTokens": 102,
+            "cacheReadTokens": 12288,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12547
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 669,
+            "outputTokens": 92,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13305
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 316,
+            "outputTokens": 251,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13751
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 8600,
+      "verification_result_chars": 2957,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 19293,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L05/joiner.py",
+      "artifact_sha256": "2c08f235f36b338dba3e26d58ca0125fdb25a3d4b2d504f9caa4d1bcb8544623",
+      "archive_sha256": "c51434787bca87054671549052d9ae44b547b232a3b1ba148ea88ca600867dcb",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "L06",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 5056,
+        "outputTokens": 3618,
+        "cacheReadTokens": 107520,
+        "cacheWriteTokens": 0,
+        "totalTokens": 116194
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 111,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9074
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 721,
+            "outputTokens": 108,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9789
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1279,
+            "outputTokens": 1945,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12952
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 214,
+            "outputTokens": 259,
+            "cacheReadTokens": 12800,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13273
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 137,
+            "outputTokens": 135,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13456
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 159,
+            "outputTokens": 158,
+            "cacheReadTokens": 13440,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13757
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 136,
+            "outputTokens": 271,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14103
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 429,
+            "outputTokens": 94,
+            "cacheReadTokens": 14080,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14603
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 186,
+            "outputTokens": 537,
+            "cacheReadTokens": 14464,
+            "cacheWriteTokens": 0,
+            "totalTokens": 15187
+          }
+        }
+      ],
+      "model_requests": 9,
+      "tool_calls": 12,
+      "tool_errors": 0,
+      "tool_result_chars": 7637,
+      "verification_result_chars": 2092,
+      "helper_calls": 1,
+      "retained_logs": [
+        {
+          "log": ".agent-evidence/check-0001.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "hash_matches": true,
+          "size_matches": true,
+          "exit_code": 3221225794,
+          "command_executed_by_helper": true,
+          "output_omitted": false,
+          "test_count_matches": false,
+          "has_ok": false
+        }
+      ],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/check-0001.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "test_count_matches": false,
+          "has_ok": false
+        },
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 32141,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L06/joiner.py",
+      "artifact_sha256": "c785bdfff4f98daf4283768731b2174d727f52ef01090209ae08570d1c844b84",
+      "archive_sha256": "2b85a7a713eb4795c2e29812eab4bca02a5a5d27094ed0fcc6311533d90dd09d",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "6a4867c9188ab6ebd68ac63ac8c5e4d3a7bef127e200b00ee42e0bf12b99cb15",
+        ".agents/skills/deepseek-efficient/scripts/run_check.py": "cd4c396cb19e70abe1024198b5942db7808545a1a78781d40bdbbb58a05f9ede"
+      }
+    },
+    {
+      "run": "L07",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3699,
+        "outputTokens": 846,
+        "cacheReadTokens": 47232,
+        "cacheWriteTokens": 0,
+        "totalTokens": 51777
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 109,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9072
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 597,
+            "outputTokens": 111,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9668
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 863,
+            "outputTokens": 285,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10748
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 185,
+            "outputTokens": 93,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10902
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 259,
+            "outputTokens": 248,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11387
+          }
+        }
+      ],
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "tool_result_chars": 4673,
+      "verification_result_chars": 792,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13645,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L07/paths.py",
+      "artifact_sha256": "a9a2bae920cd05d31cd74cd57497eec5ff8f88767265a4cb77d17e7b1ceffba6",
+      "archive_sha256": "0f77e74e89c0010a9f1e12130b09c3c12beb07c30c54b00f13bbb37f35139fb5",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "L08",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4016,
+        "outputTokens": 995,
+        "cacheReadTokens": 58496,
+        "cacheWriteTokens": 0,
+        "totalTokens": 63507
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1795,
+            "outputTokens": 115,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9078
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 661,
+            "outputTokens": 117,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9738
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 805,
+            "outputTokens": 220,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10753
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 190,
+            "outputTokens": 125,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10939
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 316,
+            "outputTokens": 160,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11356
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 249,
+            "outputTokens": 258,
+            "cacheReadTokens": 11136,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11643
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 4883,
+      "verification_result_chars": 890,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 15231,
+      "all_checks_passed": true,
+      "artifact": "artifacts/prototype/L08/paths.py",
+      "artifact_sha256": "7b00abe0cccdc0679c9cc31b28fe11889fcd92cc1d995bbc176b7df83c128584",
+      "archive_sha256": "d9e22d49e96d2459bcfb8c5fb8110bc32ea04eacf0535fdeaf59b83a538d3d99",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "6a4867c9188ab6ebd68ac63ac8c5e4d3a7bef127e200b00ee42e0bf12b99cb15",
+        ".agents/skills/deepseek-efficient/scripts/run_check.py": "cd4c396cb19e70abe1024198b5942db7808545a1a78781d40bdbbb58a05f9ede"
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic log stress fixture with 1500 explicitly irrelevant progress lines; not production log savings.",
+    "Only two workload definitions and two repetitions, not a general efficacy proof.",
+    "Candidate changes package instructions and provides a helper; effect is not attributed solely to prompt wording.",
+    "Same original code correctness contracts are reused; this is a workflow/output experiment, not an unseen-task study.",
+    "Complete original command and test suite are preserved; original and candidate outputs may also be limited by host tools."
+  ],
+  "prompt_snapshots": {
+    "original": "prompts/original.txt",
+    "candidate": "prompts/prototype.txt"
+  },
+  "helper_snapshot": "helpers/prototype.txt",
+  "host_versions": [
+    {
+      "name": "@deepseek-ai/dsh-desktop",
+      "version": "0.2.1-rc.3"
+    },
+    {
+      "name": "@deepseek-ai/dsh",
+      "version": "0.2.1-rc.3"
+    },
+    {
+      "name": "dsh-ops",
+      "version": "0.3.0"
+    }
+  ],
+  "evidence_scope": "Sanitized usage and code artifacts; raw private model sessions and logs are not public. Archive hashes identify retained private evidence, not independent proof of usage."
+}

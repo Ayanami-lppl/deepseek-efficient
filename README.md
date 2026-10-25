@@ -4,9 +4,9 @@
 
 用于 DeepSeek Agent 的轻量技能：减少重复分析，保留正确性、必要验证和完整交付。
 
-A small, prompt-only Agent Skill for DeepSeek. The skill itself requires no API key, package installation, service or background process.
+A small Agent Skill for DeepSeek: a dependency-free prompt core, plus an optional Python 3.10+ log inspector. No API key, extra model call, service or background process is required by the skill.
 
-当前版本 **v0.1.1**。正文保持经过实测的 **94 字符**；本次补齐安装、排障、离线验收、CI 和精简发布包。兼容标准 SKILL.md 格式，已验证 DeepSeek Harness 项目级加载及 headless 文件、终端任务；其他宿主尚未完成行为验证。
+当前版本 **v0.2.0**。默认正文保持经过实测的 **94 字符**；新增按需使用的完整日志摘要工具、研究来源与两阶段对照结果。兼容标准 SKILL.md 格式，已验证 DeepSeek Harness 项目级加载及 headless 文件、终端任务；其他宿主尚未完成行为验证。
 
 ## 安装与使用
 
@@ -14,10 +14,10 @@ A small, prompt-only Agent Skill for DeepSeek. The skill itself requires no API 
 
 ```powershell
 New-Item -ItemType Directory -Force .agents/skills | Out-Null
-git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
+git clone --depth 1 --branch v0.2.0 https://github.com/Ayanami-lppl/deepseek-efficient.git .agents/skills/deepseek-efficient
 ```
 
-无 Git 时，从 [v0.1.1 Release](https://github.com/Ayanami-lppl/deepseek-efficient/releases/tag/v0.1.1) 下载 deepseek-efficient-v0.1.1.zip 和 SHA256SUMS，核对哈希后，将解压的 deepseek-efficient 目录放入项目的 .agents/skills/。精简包只含技能、许可证、简短说明和文件哈希 manifest，便于避免把基准资料装进项目。
+无 Git 时，从 [v0.2.0 Release](https://github.com/Ayanami-lppl/deepseek-efficient/releases/tag/v0.2.0) 下载 deepseek-efficient-v0.2.0.zip 和 SHA256SUMS，核对哈希后，将解压的 deepseek-efficient 目录放入项目的 .agents/skills/。精简包包含技能、许可证、简短说明、可选日志工具及其用法、文件哈希 manifest，便于避免把基准资料装进项目。
 
 在 Harness 打开项目、新建会话，明确调用：
 
@@ -32,6 +32,8 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 - [任务示例与档位选择](docs/USAGE.md)
 - [未加载、重复安装、环境问题等排查](docs/TROUBLESHOOTING.md)
 - [Harness 读取检查与工具衔接](docs/HARNESS-TOOLS.md)
+- [研究来源、取舍与适用边界](docs/RESEARCH.md)
+- [可选：长日志完整执行、有限返回](references/log-output.md)
 - [变更记录](CHANGELOG.md) · [贡献与验证方法](CONTRIBUTING.md)
 
 ## 实测与边界
@@ -43,6 +45,8 @@ git clone --depth 1 --branch v0.1.1 https://github.com/Ayanami-lppl/deepseek-eff
 - **验收与不确定点候选（实验版）**：99 字符改写，两个新任务共 8 个会话，全部通过验收。本次总 token 少 11.45%，但只赢 2/4 配对，未达到预定稳定性条件，正式正文保持原样。见 [候选、完整结果与隔离试用](benchmarks/reasoning/README.md)。
 - **读取与验证顺序候选（实验版）**：95 字符改写，四个新任务共 16 个会话，全部通过验收。请求与工具次数减少，总 token 少 4.74%，但仅赢 4/8 配对，输出 token 增加 17.52%，未达到预定条件。见 [完整结果、逐任务差异与候选](benchmarks/focused/README.md)。
 - **技能有无 × High/Low**：在 rc.3 宿主中完成 32 次同期交叉对照，全部通过验收。正式技能在 High 下相对无技能少 36.01% token、赢 8/8 配对；已有技能后再调 Low 只少 2.57%。另用 4 次独立复现确认预览工具与原生 write 的读取检查衔接问题。见 [本轮原因分析、四组结果与边界](benchmarks/angles/README.md)。
+
+- **研究驱动的日志候选**：查阅 Chain of Draft、TALE、TokenEconomizer 等一手资料后，完成原型与修复各 8 次对照，16 个产物全部通过验收。修复版长日志相关反馈字符少 60.68%，但总 token 多 10.03%，未成为默认；只提供可选工具。见 [全部结果与失败分析](benchmarks/research/README.md)。
 
 这些是小样本观测，**不是通用节省率、费用承诺或推理能力提升证明**。总 token 包含缓存输入、加载与工具反馈、推理及答案输出；没有 usage 的会话命名请求不计入。扩展实验没有无技能组，两份报告不能混合计算新的节省率。原始私人会话不公开，公开材料只能复跑代码验收和检查脱敏数据的一致性，不能独立核验全部模型调用。
 

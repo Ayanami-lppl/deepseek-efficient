@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "stage": "read-only inspector repair; fresh sessions; prototype failure retained separately",
+  "design": "quiet versus synthetic verbose-log workload x original/candidate package x 2 repetitions; adjacent paired blocks, random first order reversed on second repetition",
+  "seed": 2026102503,
+  "randomizer": "Python random.Random",
+  "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "max_trials": 8,
+  "max_phase_seconds": 240,
+  "provider": "deepseek-account",
+  "model": "deepseek-flash",
+  "effort": "high",
+  "trials": [
+    {
+      "id": "M01",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      },
+      "expected_test_methods": 10
+    },
+    {
+      "id": "M02",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      },
+      "expected_test_methods": 10
+    },
+    {
+      "id": "M03",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      },
+      "expected_test_methods": 11
+    },
+    {
+      "id": "M04",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      },
+      "expected_test_methods": 11
+    },
+    {
+      "id": "M05",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      },
+      "expected_test_methods": 11
+    },
+    {
+      "id": "M06",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "joiner.py"
+      ],
+      "frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      },
+      "expected_test_methods": 11
+    },
+    {
+      "id": "M07",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      },
+      "expected_test_methods": 10
+    },
+    {
+      "id": "M08",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "editable": [
+        "paths.py"
+      ],
+      "frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      },
+      "expected_test_methods": 10
+    }
+  ],
+  "adoption": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "pair_wins_min": 3,
+    "pairs": 4,
+    "quiet_total_ratio_max": 1.05,
+    "verbose_total_ratio_max": 0.9,
+    "verbose_helper_adherence": true
+  },
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+  "helper_sha256": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b",
+  "limitations": [
+    "Synthetic log stress fixture with 1500 explicitly irrelevant progress lines; not production log savings.",
+    "Only two workload definitions and two repetitions, not a general efficacy proof.",
+    "Candidate changes package instructions and provides a helper; effect is not attributed solely to prompt wording.",
+    "Same original code correctness contracts are reused; this is a workflow/output experiment, not an unseen-task study.",
+    "Complete original command and test suite are preserved; original and candidate outputs may also be limited by host tools."
+  ]
+}

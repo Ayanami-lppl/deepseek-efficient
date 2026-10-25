@@ -1,0 +1,110 @@
+"""Run an unchanged check once, retain its full log, return a bounded tail.
+
+Python standard library only. No model calls, shell evaluation or automatic retry.
+"""
+
+import argparse
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+
+def run_check(command, cwd, tail_lines=12, tail_bytes=4096, timeout=120, log_dir=".agent-evidence"):
+    cwd = Path(cwd).resolve(strict=True)
+    if not cwd.is_dir() or not command:
+        raise ValueError("A project directory and command are required")
+    if not 1 <= tail_lines <= 200 or not 256 <= tail_bytes <= 65536 or not math.isfinite(timeout) or timeout <= 0:
+        raise ValueError("Invalid output or timeout limit")
+    directory = (cwd / log_dir).resolve()
+    if not directory.is_relative_to(cwd) or directory == cwd:
+        raise ValueError("Log directory must stay inside the project")
+    directory.mkdir(parents=True, exist_ok=True)
+    handle = None
+    for number in range(1, 10000):
+        log = directory / f"check-{number:04d}.log"
+        try:
+            handle = log.open("xb")
+            break
+        except FileExistsError:
+            continue
+    if handle is None:
+        raise ValueError("No unused evidence filename available")
+    timed_out = False
+    launch_error = None
+    return_code = None
+    with handle:
+        try:
+            result = subprocess.run(
+                list(command), cwd=cwd, stdout=handle, stderr=subprocess.STDOUT,
+                timeout=timeout, shell=False,
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
+            )
+            return_code = result.returncode
+        except subprocess.TimeoutExpired:
+            timed_out = True
+        except OSError as error:
+            launch_error = str(error)
+    digest = hashlib.sha256()
+    size = 0
+    line_breaks = 0
+    window = b""
+    with log.open("rb") as saved:
+        for chunk in iter(lambda: saved.read(65536), b""):
+            digest.update(chunk)
+            size += len(chunk)
+            line_breaks += chunk.count(b"\n")
+            window = (window + chunk)[-tail_bytes:]
+    lines = window.decode("utf-8", errors="replace").splitlines()
+    selected = lines[-tail_lines:]
+    tail = "\n".join(selected)
+    total_lines = line_breaks + int(bool(size) and not window.endswith(b"\n"))
+    summary = {
+        "schema_version": 1,
+        "exit_code": return_code,
+        "timed_out": timed_out,
+        "launch_error": launch_error,
+        "log": log.relative_to(cwd).as_posix(),
+        "sha256": digest.hexdigest(),
+        "bytes": size,
+        "lines": total_lines,
+        "tail_lines": len(selected),
+        "tail_byte_window": len(window),
+        "output_omitted": size > len(window) or total_lines > len(selected),
+    }
+    status = 124 if timed_out else 2 if launch_error is not None else return_code
+    return summary, tail, status
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--cwd", type=Path, default=Path.cwd())
+    parser.add_argument("--tail-lines", type=int, default=12)
+    parser.add_argument("--tail-bytes", type=int, default=4096)
+    parser.add_argument("--timeout", type=float, default=120)
+    parser.add_argument("--log-dir", default=".agent-evidence")
+    parser.add_argument("command", nargs=argparse.REMAINDER)
+    args = parser.parse_args()
+    command = args.command[1:] if args.command[:1] == ["--"] else args.command
+    if not command:
+        parser.error("Pass the original command after --")
+    summary, tail, status = run_check(command, args.cwd, args.tail_lines, args.tail_bytes, args.timeout, args.log_dir)
+    print(json.dumps(summary, ensure_ascii=False))
+    if tail:
+        print("--- retained log tail; consult the saved log when more evidence is needed ---")
+        print(tail)
+    return status
+
+
+if __name__ == "__main__":
+    for stream in [sys.stdout, sys.stderr]:
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+    try:
+        sys.exit(main())
+    except (OSError, ValueError) as error:
+        print("CHECK RUNNER ERROR:", error, file=sys.stderr)
+        sys.exit(2)

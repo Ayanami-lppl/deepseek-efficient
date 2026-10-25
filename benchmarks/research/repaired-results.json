@@ -1,0 +1,1021 @@
+{
+  "schema_version": 2,
+  "measurement_revision": "Retained native-shell log can establish verification even if buffered progress obscures OK in immediate tail; helper adherence evaluated separately.",
+  "observed_at": "2026-10-25T06:47:22.784Z",
+  "complete": true,
+  "completed": 8,
+  "planned": 8,
+  "design": "quiet versus synthetic verbose-log workload x original/candidate package x 2 repetitions; adjacent paired blocks, random first order reversed on second repetition",
+  "old_sha256": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55",
+  "candidate_sha256": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+  "helper_sha256": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b",
+  "adoption_criterion": {
+    "all_runs_pass_quality": true,
+    "candidate_total_ratio_max": 0.95,
+    "pair_wins_min": 3,
+    "pairs": 4,
+    "quiet_total_ratio_max": 1.05,
+    "verbose_total_ratio_max": 0.9,
+    "verbose_helper_adherence": true
+  },
+  "candidate_adopted": false,
+  "helper_adherence": true,
+  "totals": {
+    "original": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 17205,
+        "outputTokens": 7288,
+        "cacheReadTokens": 225152,
+        "cacheWriteTokens": 0,
+        "totalTokens": 249645
+      },
+      "model_requests": 22,
+      "tool_calls": 34,
+      "tool_result_chars": 26743,
+      "verification_result_chars": 8153,
+      "wall_ms": 78485
+    },
+    "candidate": {
+      "runs": 4,
+      "all_checks_passed": 4,
+      "usage": {
+        "inputTokens": 16934,
+        "outputTokens": 7116,
+        "cacheReadTokens": 250624,
+        "cacheWriteTokens": 0,
+        "totalTokens": 274674
+      },
+      "model_requests": 25,
+      "tool_calls": 36,
+      "tool_result_chars": 23204,
+      "verification_result_chars": 3583,
+      "wall_ms": 84453
+    }
+  },
+  "task_totals": {
+    "quiet": {
+      "original_runs": 2,
+      "candidate_runs": 2,
+      "original_tokens": 104307,
+      "candidate_tokens": 126924,
+      "candidate_ratio": 1.2168310851620696,
+      "original_verification_chars": 1591,
+      "candidate_verification_chars": 1003
+    },
+    "verbose": {
+      "original_runs": 2,
+      "candidate_runs": 2,
+      "original_tokens": 145338,
+      "candidate_tokens": 147750,
+      "candidate_ratio": 1.016595797382653,
+      "original_verification_chars": 6562,
+      "candidate_verification_chars": 2580
+    }
+  },
+  "pairs": [
+    {
+      "task": "quiet",
+      "repetition": 1,
+      "original_tokens": 51995,
+      "candidate_tokens": 74898,
+      "candidate_wins": false
+    },
+    {
+      "task": "quiet",
+      "repetition": 2,
+      "original_tokens": 52312,
+      "candidate_tokens": 52026,
+      "candidate_wins": true
+    },
+    {
+      "task": "verbose",
+      "repetition": 1,
+      "original_tokens": 71624,
+      "candidate_tokens": 80245,
+      "candidate_wins": false
+    },
+    {
+      "task": "verbose",
+      "repetition": 2,
+      "original_tokens": 73714,
+      "candidate_tokens": 67505,
+      "candidate_wins": true
+    }
+  ],
+  "rows": [
+    {
+      "run": "M01",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4131,
+        "outputTokens": 1135,
+        "cacheReadTokens": 69632,
+        "cacheWriteTokens": 0,
+        "totalTokens": 74898
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 111,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9080
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 676,
+            "outputTokens": 113,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9749
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 822,
+            "outputTokens": 300,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10850
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 161,
+            "outputTokens": 124,
+            "cacheReadTokens": 10752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11037
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 201,
+            "outputTokens": 136,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11217
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 226,
+            "outputTokens": 111,
+            "cacheReadTokens": 11008,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11345
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 244,
+            "outputTokens": 240,
+            "cacheReadTokens": 11136,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11620
+          }
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 10,
+      "tool_errors": 0,
+      "tool_result_chars": 4274,
+      "verification_result_chars": 204,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 21070,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M01/paths.py",
+      "artifact_sha256": "b879fe7df6912e7ff9925697dc19cb23078e136eaf9c6534ca7026858d8ccd5d",
+      "archive_sha256": "9540f14058cd0267a0156117161a279a22f546ef89af61f78a445df9137eebdc",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      }
+    },
+    {
+      "run": "M02",
+      "task": "quiet",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3769,
+        "outputTokens": 994,
+        "cacheReadTokens": 47232,
+        "cacheWriteTokens": 0,
+        "totalTokens": 51995
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 108,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9077
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 608,
+            "outputTokens": 111,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9679
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 880,
+            "outputTokens": 284,
+            "cacheReadTokens": 9600,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10764
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 203,
+            "outputTokens": 93,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10920
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 277,
+            "outputTokens": 398,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11555
+          }
+        }
+      ],
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "tool_result_chars": 4736,
+      "verification_result_chars": 792,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 14059,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M02/paths.py",
+      "artifact_sha256": "fb242b9b96a28a70ea7f235480ec377c5b41b3ec1fc15e8bb4fdd14b87bc3edc",
+      "archive_sha256": "8c121751c63248851cdaede43f014bb75801b2e1b8a702ca2de6d42fcdd23cdb",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "M03",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4790,
+        "outputTokens": 2450,
+        "cacheReadTokens": 64384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 71624
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 112,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9081
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 676,
+            "outputTokens": 101,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9737
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1233,
+            "outputTokens": 1586,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12547
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 195,
+            "outputTokens": 141,
+            "cacheReadTokens": 12416,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12752
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 617,
+            "outputTokens": 164,
+            "cacheReadTokens": 12672,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13453
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 268,
+            "outputTokens": 346,
+            "cacheReadTokens": 13440,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14054
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 8342,
+      "verification_result_chars": 3215,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 24813,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M03/joiner.py",
+      "artifact_sha256": "f225b1f1d632f361f9c0f00c142d08b9db0398147510c4aead2103cc14d071d5",
+      "archive_sha256": "d12a6789ba02ea68bcb0c0cfdeee04861b9187d07d9afb07cab9161f8431e2e5",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "M04",
+      "task": "verbose",
+      "repetition": 1,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4588,
+        "outputTokens": 2825,
+        "cacheReadTokens": 72832,
+        "cacheWriteTokens": 0,
+        "totalTokens": 80245
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 128,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9097
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 540,
+            "outputTokens": 130,
+            "cacheReadTokens": 9088,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9758
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 421,
+            "outputTokens": 129,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10278
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 322,
+            "outputTokens": 79,
+            "cacheReadTokens": 10240,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10641
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 961,
+            "outputTokens": 1326,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12911
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 175,
+            "outputTokens": 218,
+            "cacheReadTokens": 12800,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13193
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 368,
+            "outputTokens": 815,
+            "cacheReadTokens": 13184,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14367
+          }
+        }
+      ],
+      "model_requests": 7,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 7437,
+      "verification_result_chars": 1290,
+      "helper_calls": 1,
+      "retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "hash_matches": true,
+          "size_matches": true,
+          "exit_code": 0,
+          "command_executed_by_helper": false,
+          "output_omitted": true,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": true,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 27862,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M04/joiner.py",
+      "artifact_sha256": "fb3cc97eaebe5e340f2ec62f28edba75787783a8bf695dc7e1325933cdc99e64",
+      "archive_sha256": "80a8cc8a368a56559fa63e96afefab60b697d41d0166f29e666efe6d7f1235ae",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      }
+    },
+    {
+      "run": "M05",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4374,
+        "outputTokens": 2331,
+        "cacheReadTokens": 60800,
+        "cacheWriteTokens": 0,
+        "totalTokens": 67505
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 65,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9034
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 343,
+            "outputTokens": 80,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9383
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 430,
+            "outputTokens": 101,
+            "cacheReadTokens": 9344,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9875
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1243,
+            "outputTokens": 1551,
+            "cacheReadTokens": 9856,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12650
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 170,
+            "outputTokens": 242,
+            "cacheReadTokens": 12544,
+            "cacheWriteTokens": 0,
+            "totalTokens": 12956
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 387,
+            "outputTokens": 292,
+            "cacheReadTokens": 12928,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13607
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 6624,
+      "verification_result_chars": 1290,
+      "helper_calls": 1,
+      "retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "hash_matches": true,
+          "size_matches": true,
+          "exit_code": 0,
+          "command_executed_by_helper": false,
+          "output_omitted": true,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": true,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 23161,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M05/joiner.py",
+      "artifact_sha256": "7e9fb4648469296e8db9d9a0662047213f9be7d9e32b2f09ad1f31c13d4c7122",
+      "archive_sha256": "2c08308b17cba03b9eb4b5a2662af1add47ff0db297cdaf93ce5ec59d16c510f",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      }
+    },
+    {
+      "run": "M06",
+      "task": "verbose",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 4792,
+        "outputTokens": 3002,
+        "cacheReadTokens": 65920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 73714
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 114,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9083
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 678,
+            "outputTokens": 109,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9747
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 1243,
+            "outputTokens": 2211,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13182
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 190,
+            "outputTokens": 101,
+            "cacheReadTokens": 13056,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13347
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 259,
+            "outputTokens": 195,
+            "cacheReadTokens": 13312,
+            "cacheWriteTokens": 0,
+            "totalTokens": 13766
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 621,
+            "outputTokens": 272,
+            "cacheReadTokens": 13696,
+            "cacheWriteTokens": 0,
+            "totalTokens": 14589
+          }
+        }
+      ],
+      "model_requests": 6,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "tool_result_chars": 8474,
+      "verification_result_chars": 3347,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "2e193eb62bf1a2893afbce2b597614dc4e0ac5b28cb253b17791dc00c1017276",
+          "bytes": 178012,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 11,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 26288,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M06/joiner.py",
+      "artifact_sha256": "7c56013132078322ea601cbda8477b1bb5b5835e5372766c6ccb47d2dfd205d4",
+      "archive_sha256": "ee0c7ed612f5d2356dc229f0d85513fa41aa372d1091992949b223a70f6924de",
+      "expected_frozen_hashes": {
+        "test_joiner.py": "e26f53e2846b0f20b3610e8a2fe0c6bf85d5fbf99e84eb876fd3d58e456c240d",
+        "CONTRACT.md": "43282eadb116c13d42574479db9b21f9edf34d6cda5e7fdaa0ba31fb137c2139",
+        "TASK.md": "96d498ff493c619c53b09d21084f0eac3df295013b13cee655ca7ac592482aa6",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "7ac1e0c679229e109b9df46a93171f5c3bae9eebe1be8405fbd20524009d7aef",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "M07",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "original",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3854,
+        "outputTokens": 842,
+        "cacheReadTokens": 47616,
+        "cacheWriteTokens": 0,
+        "totalTokens": 52312
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 117,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9086
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 741,
+            "outputTokens": 112,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9813
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 886,
+            "outputTokens": 246,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10860
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 171,
+            "outputTokens": 98,
+            "cacheReadTokens": 10752,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11021
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 255,
+            "outputTokens": 269,
+            "cacheReadTokens": 11008,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11532
+          }
+        }
+      ],
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "tool_result_chars": 5191,
+      "verification_result_chars": 799,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 13325,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M07/paths.py",
+      "artifact_sha256": "5a212bcd9b34b18648d8d69a9c1297855a9ea29f206c052568f1da0adea15f73",
+      "archive_sha256": "7f1eebbce3be031701673f77f484007e0cf68edf56df1790c66922e5e9bf704d",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "b10f0ba3eacdeb741838e0ad56db9f57329d71c23a1a0faf292cd8b94c5bfe55"
+      }
+    },
+    {
+      "run": "M08",
+      "task": "quiet",
+      "repetition": 2,
+      "arm": "candidate",
+      "effort": "high",
+      "usage": {
+        "inputTokens": 3841,
+        "outputTokens": 825,
+        "cacheReadTokens": 47360,
+        "cacheWriteTokens": 0,
+        "totalTokens": 52026
+      },
+      "request_usage": [
+        {
+          "usage": {
+            "inputTokens": 1801,
+            "outputTokens": 114,
+            "cacheReadTokens": 7168,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9083
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 679,
+            "outputTokens": 99,
+            "cacheReadTokens": 8960,
+            "cacheWriteTokens": 0,
+            "totalTokens": 9738
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 811,
+            "outputTokens": 255,
+            "cacheReadTokens": 9728,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10794
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 233,
+            "outputTokens": 98,
+            "cacheReadTokens": 10624,
+            "cacheWriteTokens": 0,
+            "totalTokens": 10955
+          }
+        },
+        {
+          "usage": {
+            "inputTokens": 317,
+            "outputTokens": 259,
+            "cacheReadTokens": 10880,
+            "cacheWriteTokens": 0,
+            "totalTokens": 11456
+          }
+        }
+      ],
+      "model_requests": 5,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "tool_result_chars": 4869,
+      "verification_result_chars": 799,
+      "helper_calls": 0,
+      "retained_logs": [],
+      "other_retained_logs": [
+        {
+          "log": ".agent-evidence/verify.log",
+          "sha256": "ab97fbad2700bf2e96f3c560f1d8c20fd607be1252285c8cd2043dd75105ccae",
+          "bytes": 792,
+          "test_count_matches": true,
+          "has_ok": true
+        }
+      ],
+      "helper_evidence_passed": false,
+      "requested_verification_passed": true,
+      "unit_tests_passed": true,
+      "test_methods": 10,
+      "protected_files_changed": [],
+      "route_correct": true,
+      "transport_exit": 0,
+      "timed_out": false,
+      "has_final": true,
+      "wall_ms": 12360,
+      "all_checks_passed": true,
+      "artifact": "artifacts/repaired/M08/paths.py",
+      "artifact_sha256": "fb242b9b96a28a70ea7f235480ec377c5b41b3ec1fc15e8bb4fdd14b87bc3edc",
+      "archive_sha256": "0fe970c442fa02fcf3ef018e8b8baffcb54a0d9f62a68aed69ad02b03f300ee9",
+      "expected_frozen_hashes": {
+        "test_paths.py": "95bb0336b97caccf7e4afa386a14591eb8dc854fd51cd0c176484907c0bb4277",
+        "CONTRACT.md": "bf1f6d3afc2151921c0bd933dcbc35a6dcc39230066e017c382cf8b9cd571e7d",
+        "TASK.md": "278cc12cd89a1d9e0f8cae8a6bfe7029a7d1b639734882cfd7c76e1bd8d66657",
+        "AGENTS.md": "a6605e6fb3fbd5f9417ab9ca4800a68a0aeb24ee655f67848629c7a43033142e",
+        "verify.py": "9e43cd366c32e3028e93c72ceabe82399f7c70e4befd767daa0dfb36f7dd820e",
+        ".agents/skills/deepseek-efficient/SKILL.md": "dc40999cba061f4433a63dc0c4425872e9138e752556bdaafdef63ae81a65ab1",
+        ".agents/skills/deepseek-efficient/scripts/check_result.py": "212d9e72bc6458e4233e38e9428548eaa604ab8881fffe9882fe49a68bfd850b"
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic log stress fixture with 1500 explicitly irrelevant progress lines; not production log savings.",
+    "Only two workload definitions and two repetitions, not a general efficacy proof.",
+    "Candidate changes package instructions and provides a helper; effect is not attributed solely to prompt wording.",
+    "Same original code correctness contracts are reused; this is a workflow/output experiment, not an unseen-task study.",
+    "Complete original command and test suite are preserved; original and candidate outputs may also be limited by host tools."
+  ],
+  "prompt_snapshots": {
+    "original": "prompts/original.txt",
+    "candidate": "prompts/repaired.txt"
+  },
+  "helper_snapshot": "../../scripts/check_result.py",
+  "host_versions": [
+    {
+      "name": "@deepseek-ai/dsh-desktop",
+      "version": "0.2.1-rc.3"
+    },
+    {
+      "name": "@deepseek-ai/dsh",
+      "version": "0.2.1-rc.3"
+    },
+    {
+      "name": "dsh-ops",
+      "version": "0.3.0"
+    }
+  ],
+  "evidence_scope": "Sanitized usage and code artifacts; raw private model sessions and logs are not public. Archive hashes identify retained private evidence, not independent proof of usage."
+}
